@@ -1,0 +1,3915 @@
+{
+	"documents": [
+		{
+			"alertId": 82842459,
+			"custAlertId": "SCKNC-A-0",
+			"inferenceId": 0,
+			"inferenceIdAsStr": "",
+			"subject": "gcp vpc network changes",
+			"description": "Identifies an attempt to change the VPC network in the Google Cloud Platform. An adversary can attempt to modify a cloud account's compute service infrastructure to evade defenses.",
+			"summary": "",
+			"currentState": "Critical",
+			"serviceName": "gcp vpc network changes",
+			"permanentlySuppressed": false,
+			"alertType": "Monitoring",
+			"ingestionSource": "NEIngestor",
+			"alertSource": "GoogleChronicle",
+			"alertSourceId": 0,
+			"externalSource": "GoogleChronicle",
+			"repeatCount": 1,
+			"status": "New",
+			"priority": "P3",
+			"createdTime": "2025-05-16T12:31:43.685430Z",
+			"updatedTime": "2025-05-16T12:31:43.685430Z",
+			"eventType": "Alert",
+			"metric": "gcp_vpc_network_changes",
+			"createdBy": "GoogleChronicle",
+			"closedTime": "1970-01-01T00:00:00+00:00",
+			"dataCenterCode": "US1",
+			"alertClassId": 0,
+			"alertSubClassId": 0,
+			"alertCategoryId": 0,
+			"alertSubCategoryId": 0,
+			"alertClass": "Security",
+			"alertSubClass": "SIEM",
+			"alertCategory": "Defense Evasion, Defense Evasion",
+			"alertSubCategory": "Modify Cloud Compute Infrastructure, Modify Cloud Compute Infrastructure",
+			"alertTags": [
+				{
+					"type": "principal_enterprise_ip",
+					"value": "no"
+				},
+				{
+					"type": "principal_default_user",
+					"value": "no"
+				},
+				{
+					"type": "target_default_user",
+					"value": "no"
+				}
+			],
+			"siteName": "",
+			"resourceType": "",
+			"externalAlertId": "de_9a787498-23ee-91de-e34c-8772e05fe186",
+			"externalClientId": "client_694689",
+			"alertTime": "2025-05-16T12:31:43.685430Z",
+			"customer_id": "EPICID-57-9544627939",
+			"partner_id": "EPICID-1-3013093360",
+			"service_provider_id": "EPICID-57-3201882173",
+			"customerName": "Netenrich Corporate",
+			"partnerName": "Netenrich Inc",
+			"serviceProviderName": "Netenrich Inc (SP)",
+			"assets": [
+				{
+					"asset_name": null,
+					"asset_type": "",
+					"source": [
+						{
+							"source_asset_id": "",
+							"name": "GoogleChronicle"
+						}
+					]
+				}
+			],
+			"associatedEntities": [
+				{
+					"created_time": 1740477482101,
+					"updated_time": 1740478209931,
+					"critical": false,
+					"entityGroups": [],
+					"opsramp_device": {
+						"total_apps": 0,
+						"device_type": "meraki_vlan",
+						"public_ip_flag": false,
+						"private_ip_addresses": [
+							"172.27.1.24"
+						],
+						"ip_address": [
+							"172.27.1.24"
+						],
+						"general_info_dns": [
+							""
+						],
+						"alias_name": "",
+						"asset_make": "MERAKI",
+						"general_info_created_time": 1740477392000,
+						"category": "meraki_vlan",
+						"antivirus_currdef_supported": false,
+						"last_monitored_time": 1740477968000,
+						"class_code": "generic.resource"
+					},
+					"source": [
+						{
+							"created_time": 1740477392000,
+							"updated_time": 1740478208927,
+							"integration_id": "INTG-c54d536e-daf4-47ee-b793-484587ee18e3",
+							"ingested_source": "MERAKI",
+							"name": "Opsramp",
+							"namespace": "MERAKI_VLAN",
+							"id": "f87abaed-c6b4-4e16-9d27-d5b92f4acb4c",
+							"state": "active",
+							"type": "CMDB",
+							"uri": "https://netenrich.api.opsramp.com",
+							"client_id": "client_694689",
+							"status": "UNKNOWN"
+						}
+					],
+					"type": "opsramp_meraki_vlan",
+					"entity_class": "Network",
+					"deleted": false,
+					"name": "Default",
+					"attributes": {
+						"environment": null,
+						"employment_type": "Full-Time",
+						"pod": null,
+						"OU": "Engineering",
+						"office_location": null
+					},
+					"id": "d260b98f-7185-4a5d-9ed8-108ed1be8f2d",
+					"state": "Active",
+					"category": "Networks"
+				}
+			],
+			"deviceName": "",
+			"resourceName": "",
+			"isolate": false,
+			"ingestionTime": "2025-05-16T12:33:09.372410520Z",
+			"alertSourceUrl": "https://netenrichinternal.backstory.chronicle.security/alert?alertId=de_9a787498-23ee-91de-e34c-8772e05fe186",
+			"isDemo": false,
+			"additionalContext": {
+				"data": {
+					"detection": [
+						{
+							"detectionFields": [
+								{
+									"source": "udm.target.resource.name",
+									"value": "default",
+									"key": "resourceName"
+								},
+								{
+									"value": "c-389-3689385424-dev-llm",
+									"key": "projectName"
+								}
+							],
+							"variables": {
+								"resourceName": {
+									"stringVal": "default",
+									"type": "MATCH",
+									"value": "default",
+									"sourcePath": "udm.target.resource.name"
+								},
+								"projectName": {
+									"stringVal": "c-389-3689385424-dev-llm",
+									"type": "MATCH",
+									"value": "c-389-3689385424-dev-llm"
+								}
+							},
+							"urlBackToProduct": "https://netenrichinternal.backstory.chronicle.security/alert?alertId=de_9a787498-23ee-91de-e34c-8772e05fe186",
+							"ruleVersion": "ru_f3f04eb0-6667-4e59-85d1-2557af6ad156@v_1678166750_588831000",
+							"ruleType": "SINGLE_EVENT",
+							"ruleName": "gcp_vpc_network_changes",
+							"description": "Identifies an attempt to change the VPC network in the Google Cloud Platform. An adversary can attempt to modify a cloud account's compute service infrastructure to evade defenses.",
+							"riskScore": 40,
+							"ruleId": "ru_f3f04eb0-6667-4e59-85d1-2557af6ad156",
+							"alertState": "ALERTING",
+							"ruleLabels": [
+								{
+									"key": "actor"
+								},
+								{
+									"key": "category"
+								},
+								{
+									"value": "Low",
+									"key": "confidence"
+								},
+								{
+									"value": "GCP, GCP",
+									"key": "custom"
+								},
+								{
+									"value": "Cloud Service",
+									"key": "datasource"
+								},
+								{
+									"value": "Identifies an attempt to change the VPC network in the Google Cloud Platform. An adversary can attempt to modify a cloud account's compute service infrastructure to evade defenses.",
+									"key": "description"
+								},
+								{
+									"value": "0",
+									"key": "externalMITRE"
+								},
+								{
+									"value": "0",
+									"key": "externalSubject"
+								},
+								{
+									"value": "This could be benign in case if change is performed by system administrators. Verify that the configuration change was expected. Exceptions can be added to reference list to filter expected behavior.",
+									"key": "falsePositives"
+								},
+								{
+									"value": "Iaas, Iaas",
+									"key": "logsource"
+								},
+								{
+									"key": "malware"
+								},
+								{
+									"key": "product"
+								},
+								{
+									"value": "Low",
+									"key": "severity"
+								},
+								{
+									"value": "gcp vpc network changes",
+									"key": "subject"
+								},
+								{
+									"value": "Defense Evasion, Defense Evasion",
+									"key": "tactic"
+								},
+								{
+									"value": "Modify Cloud Compute Infrastructure, Modify Cloud Compute Infrastructure",
+									"key": "technique"
+								},
+								{
+									"key": "tool"
+								},
+								{
+									"key": "vulnerability"
+								}
+							]
+						}
+					],
+					"timeWindow": {
+						"startTime": "2025-05-16T12:22:00Z",
+						"endTime": "2025-05-16T12:27:00Z"
+					},
+					"collectionElements": [
+						{
+							"references": [
+								{
+									"id": {
+										"id": "YjY2ZGQzMjQzNzg3ZTc1ZWFlMjQxNzc1ZWYwNWJlOGE="
+									},
+									"event": {
+										"principal": {
+											"resourceAncestors": [
+												{
+													"attribute": {
+														"labels": [
+															{
+																"value": "projects/c-389-3689385424-dev-llm/global/networks/default",
+																"key": "cloud_project"
+															}
+														]
+													}
+												}
+											],
+											"resource": {
+												"attribute": {
+													"cloud": {
+														"project": {
+															"name": "projects/c-389-3689385424-dev-llm/global/networks/default",
+															"resourceSubtype": "compute.networks"
+														}
+													},
+													"labels": [
+														{
+															"key": "Request_instances_instance"
+														},
+														{
+															"value": "type.googleapis.com/compute.networks.delete",
+															"key": "request_type"
+														}
+													]
+												}
+											},
+											"ip": [
+												"2600:1900:0:2101::900"
+											],
+											"administrativeDomain": "ri-model-administrator-dev.iam.gserviceaccount.com",
+											"ipGeoArtifact": [
+												{
+													"ip": "2600:1900:0:2101::900",
+													"location": {
+														"regionLatitude": 39.740063,
+														"countryOrRegion": "United States",
+														"regionCoordinates": {
+															"latitude": 39.7400624,
+															"longitude": -104.98616009999999
+														},
+														"state": "Colorado",
+														"regionLongitude": -104.98616
+													},
+													"network": {
+														"carrierName": "google",
+														"organizationName": "google llc"
+													}
+												}
+											],
+											"location": {
+												"regionLatitude": 39.740063,
+												"countryOrRegion": "United States",
+												"regionCoordinates": {
+													"latitude": 39.7400624,
+													"longitude": -104.98616009999999
+												},
+												"state": "Colorado",
+												"regionLongitude": -104.98616
+											},
+											"asset": {
+												"ip": [
+													"2600:1900:0:2101::900"
+												]
+											},
+											"user": {
+												"emailAddresses": [
+													"ri-gcp-admin@ri-model-administrator-dev.iam.gserviceaccount.com",
+													"ri-gcp-admin@ri-model-administrator-dev.iam.gserviceaccount.com",
+													"ri-gcp-admin@ri-model-administrator-dev.iam.gserviceaccount.com"
+												],
+												"userDisplayName": "ri-gcp-admin",
+												"attribute": {
+													"cloud": {
+														"environment": "GOOGLE_CLOUD_PLATFORM"
+													},
+													"permissions": [
+														{
+															"name": "compute.networks.delete"
+														},
+														{
+															"type": "ADMIN_WRITE"
+														}
+													],
+													"roles": [
+														{
+															"name": "roles/owner",
+															"type": "SERVICE_ACCOUNT"
+														}
+													],
+													"labels": [
+														{
+															"value": "106871771408271505489",
+															"key": "oauth2_client_id"
+														},
+														{
+															"value": "true",
+															"key": "authorization_granted"
+														}
+													]
+												},
+												"userid": "ri-gcp-admin",
+												"productObjectId": "106871771408271505489"
+											}
+										},
+										"metadata": {
+											"logType": "GCP_CLOUDAUDIT",
+											"eventType": "RESOURCE_DELETION",
+											"vendorName": "Google Cloud Platform",
+											"baseLabels": {
+												"allowScopedAccess": true,
+												"logTypes": [
+													"GCP_CLOUDAUDIT"
+												]
+											},
+											"productName": "Google Compute Engine",
+											"collectedTimestamp": "2025-05-16T12:26:31.574869042Z",
+											"ingestedTimestamp": "2025-05-16T12:26:37.102810Z",
+											"productLogId": "-xk7erie67p4w",
+											"id": "AAAAANVEafD28jp1BhNEio43js0AAAAADgAAACoAAAA=",
+											"enrichmentLabels": {
+												"allowScopedAccess": true,
+												"logTypes": [
+													"GCP_IAM_ANALYSIS",
+													"GCP_IAM_CONTEXT"
+												]
+											},
+											"productDeploymentId": "c-389-3689385424-dev-llm",
+											"eventTimestamp": "2025-05-16T12:26:30.981780Z",
+											"productEventType": "v1.compute.networks.delete"
+										},
+										"securityResult": [
+											{
+												"severity": "INFORMATIONAL",
+												"detectionFields": [
+													{
+														"value": "projects/c-389-3689385424-dev-llm/global/networks/default",
+														"key": "resource"
+													},
+													{
+														"value": "c541b1a7ba1f9b999eaad2c31a122e23e59f1732",
+														"key": "key_id"
+													}
+												],
+												"categoryDetails": [
+													"projects/c-389-3689385424-dev-llm/logs/cloudaudit.googleapis.com%2Factivity"
+												],
+												"action": [
+													"ALLOW"
+												]
+											}
+										],
+										"additional": {
+											"request_attributes_time": "2025-05-16T12:26:31.295144Z"
+										},
+										"target": {
+											"cloud": {
+												"project": {
+													"name": "c-389-3689385424-dev-llm"
+												}
+											},
+											"resourceAncestors": [
+												{
+													"name": "c-389-3689385424-dev-llm"
+												},
+												{
+													"attribute": {
+														"labels": [
+															{
+																"value": "projects/c-389-3689385424-dev-llm/global/networks/default",
+																"key": "cloud_project"
+															}
+														]
+													}
+												}
+											],
+											"application": "compute.googleapis.com",
+											"resource": {
+												"name": "default",
+												"attribute": {
+													"cloud": {
+														"environment": "GOOGLE_CLOUD_PLATFORM"
+													},
+													"labels": [
+														{
+															"value": "RUNNING",
+															"key": "response_status"
+														},
+														{
+															"value": "delete",
+															"key": "response_operation_type"
+														},
+														{
+															"value": "operation-1747398390922-6353fe45f3eee-d4caf1e4-0005978e",
+															"key": "response_name"
+														},
+														{
+															"value": "type.googleapis.com/compute.networks.delete",
+															"key": "Request type"
+														}
+													]
+												},
+												"productObjectId": "projects/c-389-3689385424-dev-llm/global/networks/default",
+												"resourceType": "VPC_NETWORK"
+											}
+										},
+										"network": {
+											"http": {
+												"userAgent": "google-api-go-client/0.5 Terraform/1.10.3 (+https://www.terraform.io) Terraform-Plugin-SDK/2.36.0 terraform-provider-google/6.35.0,gzip(gfe)"
+											}
+										}
+									}
+								}
+							],
+							"label": "e"
+						}
+					],
+					"type": "RULE_DETECTION",
+					"detectionTime": "2025-05-16T12:27:00Z"
+				},
+				"dataIngestId": "Alert-1747398789372"
+			},
+			"version": 1,
+			"versionAsStr": "1.0",
+			"security": {
+				"events": [
+					{
+						"principal": {
+							"resourceAncestors": [
+								{
+									"attribute": {
+										"labels": [
+											{
+												"value": "projects/c-389-3689385424-dev-llm/global/networks/default",
+												"key": "cloud_project"
+											}
+										]
+									}
+								}
+							],
+							"resource": {
+								"attribute": {
+									"cloud": {
+										"project": {
+											"name": "projects/c-389-3689385424-dev-llm/global/networks/default",
+											"resourceSubtype": "compute.networks"
+										}
+									},
+									"labels": [
+										{
+											"key": "Request_instances_instance"
+										},
+										{
+											"value": "type.googleapis.com/compute.networks.delete",
+											"key": "request_type"
+										}
+									]
+								}
+							},
+							"ip": [
+								"2600:1900:0:2101::900"
+							],
+							"administrativeDomain": "ri-model-administrator-dev.iam.gserviceaccount.com",
+							"ipGeoArtifact": [
+								{
+									"ip": "2600:1900:0:2101::900",
+									"location": {
+										"regionLatitude": 39.740063,
+										"countryOrRegion": "United States",
+										"regionCoordinates": {
+											"latitude": 39.7400624,
+											"longitude": -104.98616009999999
+										},
+										"state": "Colorado",
+										"regionLongitude": -104.98616
+									},
+									"network": {
+										"carrierName": "google",
+										"organizationName": "google llc"
+									}
+								}
+							],
+							"location": {
+								"regionLatitude": 39.740063,
+								"countryOrRegion": "United States",
+								"regionCoordinates": {
+									"latitude": 39.7400624,
+									"longitude": -104.98616009999999
+								},
+								"state": "Colorado",
+								"regionLongitude": -104.98616
+							},
+							"asset": {
+								"ip": [
+									"2600:1900:0:2101::900"
+								]
+							},
+							"user": {
+								"emailAddresses": [
+									"ri-gcp-admin@ri-model-administrator-dev.iam.gserviceaccount.com",
+									"ri-gcp-admin@ri-model-administrator-dev.iam.gserviceaccount.com",
+									"ri-gcp-admin@ri-model-administrator-dev.iam.gserviceaccount.com"
+								],
+								"userDisplayName": "ri-gcp-admin",
+								"attribute": {
+									"cloud": {
+										"environment": "GOOGLE_CLOUD_PLATFORM"
+									},
+									"permissions": [
+										{
+											"name": "compute.networks.delete"
+										},
+										{
+											"type": "ADMIN_WRITE"
+										}
+									],
+									"roles": [
+										{
+											"name": "roles/owner",
+											"type": "SERVICE_ACCOUNT"
+										}
+									],
+									"labels": [
+										{
+											"value": "106871771408271505489",
+											"key": "oauth2_client_id"
+										},
+										{
+											"value": "true",
+											"key": "authorization_granted"
+										}
+									]
+								},
+								"userid": "ri-gcp-admin",
+								"productObjectId": "106871771408271505489"
+							}
+						},
+						"metadata": {
+							"logType": "GCP_CLOUDAUDIT",
+							"eventType": "RESOURCE_DELETION",
+							"vendorName": "Google Cloud Platform",
+							"baseLabels": {
+								"allowScopedAccess": true,
+								"logTypes": [
+									"GCP_CLOUDAUDIT"
+								]
+							},
+							"productName": "Google Compute Engine",
+							"collectedTimestamp": "2025-05-16T12:26:31.574869042Z",
+							"ingestedTimestamp": "2025-05-16T12:26:37.102810Z",
+							"productLogId": "-xk7erie67p4w",
+							"id": "AAAAANVEafD28jp1BhNEio43js0AAAAADgAAACoAAAA=",
+							"enrichmentLabels": {
+								"allowScopedAccess": true,
+								"logTypes": [
+									"GCP_IAM_ANALYSIS",
+									"GCP_IAM_CONTEXT"
+								]
+							},
+							"productDeploymentId": "c-389-3689385424-dev-llm",
+							"eventTimestamp": "2025-05-16T12:26:30.981780Z",
+							"productEventType": "v1.compute.networks.delete"
+						},
+						"securityResult": [
+							{
+								"severity": "INFORMATIONAL",
+								"detectionFields": [
+									{
+										"value": "projects/c-389-3689385424-dev-llm/global/networks/default",
+										"key": "resource"
+									},
+									{
+										"value": "c541b1a7ba1f9b999eaad2c31a122e23e59f1732",
+										"key": "key_id"
+									}
+								],
+								"categoryDetails": [
+									"projects/c-389-3689385424-dev-llm/logs/cloudaudit.googleapis.com%2Factivity"
+								],
+								"action": [
+									"ALLOW"
+								]
+							}
+						],
+						"target": {
+							"cloud": {
+								"project": {
+									"name": "c-389-3689385424-dev-llm"
+								}
+							},
+							"resourceAncestors": [
+								{
+									"name": "c-389-3689385424-dev-llm"
+								},
+								{
+									"attribute": {
+										"labels": [
+											{
+												"value": "projects/c-389-3689385424-dev-llm/global/networks/default",
+												"key": "cloud_project"
+											}
+										]
+									}
+								}
+							],
+							"application": "compute.googleapis.com",
+							"resource": {
+								"name": "default",
+								"attribute": {
+									"cloud": {
+										"environment": "GOOGLE_CLOUD_PLATFORM"
+									},
+									"labels": [
+										{
+											"value": "RUNNING",
+											"key": "response_status"
+										},
+										{
+											"value": "delete",
+											"key": "response_operation_type"
+										},
+										{
+											"value": "operation-1747398390922-6353fe45f3eee-d4caf1e4-0005978e",
+											"key": "response_name"
+										},
+										{
+											"value": "type.googleapis.com/compute.networks.delete",
+											"key": "Request type"
+										}
+									]
+								},
+								"productObjectId": "projects/c-389-3689385424-dev-llm/global/networks/default",
+								"resourceType": "VPC_NETWORK"
+							}
+						},
+						"network": {
+							"http": {
+								"userAgent": "google-api-go-client/0.5 Terraform/1.10.3 (+https://www.terraform.io) Terraform-Plugin-SDK/2.36.0 terraform-provider-google/6.35.0,gzip(gfe)"
+							}
+						}
+					}
+				],
+				"ruleId": "ru_f3f04eb0-6667-4e59-85d1-2557af6ad156",
+				"actions": [
+					"ALLOW"
+				],
+				"eventTypes": [
+					"RESOURCE_DELETION"
+				],
+				"ruleVersion": "ru_f3f04eb0-6667-4e59-85d1-2557af6ad156@v_1678166750_588831000",
+				"networkComms": [
+					{
+						"sourceIp": "2600:1900:0:2101::900"
+					},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"ruleConfidence": "Low",
+				"logsourceTypeNames": [
+					"Google Compute Engine"
+				]
+			},
+			"meta": {
+				"is_new_alert": true,
+				"alertCorrelation": {
+					"queue": {
+						"partitionKey": "EPICID-57-9544627939",
+						"topic": "ape_incoming_normalised_alerts_topic",
+						"type": "kafka"
+					}
+				}
+			},
+			"metricUniqueIdentifier": "UD0000",
+			"resolutionsPriorityId": 4,
+			"entityGroups": [],
+			"services": [
+				{
+					"scope": "customer",
+					"serviceId": "8503750f-3b13-47b8-9dab-cde4c50d83df"
+				}
+			],
+			"servicesImpacted": {
+				"customer": 1
+			},
+			"primaryRoutingService": "8503750f-3b13-47b8-9dab-cde4c50d83df",
+			"actions": [
+				{
+					"action": "route",
+					"rule_id": "ef7e0dda-0eb8-4cd7-b6ae-9ce26d3ed173",
+					"rule_name": "Route rule for All Google Chronicle Signals - 1686021703064",
+					"scope": "customer",
+					"value_type": "dict",
+					"on_conflict": "append",
+					"precedence_order": 59,
+					"dict_value": {
+						"service_id": "8503750f-3b13-47b8-9dab-cde4c50d83df"
+					}
+				},
+				{
+					"action": "alert_tag",
+					"rule_id": "5b314334-b60d-4843-a043-6c05b7449ac3",
+					"rule_name": "principal_enterprise_IP_addresses-no",
+					"scope": "customer",
+					"value_type": "list",
+					"on_conflict": "append",
+					"precedence_order": 86,
+					"list_value": [
+						{
+							"value": "no",
+							"key": "principal_enterprise_ip"
+						}
+					]
+				},
+				{
+					"action": "alert_tag",
+					"rule_id": "9f5b615b-56d3-42f8-8337-97743f6803f0",
+					"rule_name": "principal_default_users - no",
+					"scope": "customer",
+					"value_type": "list",
+					"on_conflict": "append",
+					"precedence_order": 87,
+					"list_value": [
+						{
+							"value": "no",
+							"key": "principal_default_user"
+						}
+					]
+				},
+				{
+					"action": "alert_tag",
+					"rule_id": "35aa2353-8d52-49b7-8e16-307daba278e8",
+					"rule_name": "target_default_user- no",
+					"scope": "customer",
+					"value_type": "list",
+					"on_conflict": "append",
+					"precedence_order": 95,
+					"list_value": [
+						{
+							"value": "no",
+							"key": "target_default_user"
+						}
+					]
+				}
+			],
+			"vectorization": {
+				"alertVector": [
+					-0.42293331027030945,
+					0.10365846753120422,
+					0.05796660855412483,
+					0.07134027034044266,
+					0.26473045349121094,
+					-0.07205314934253693,
+					0.019074199721217155,
+					0.08234941214323044,
+					0.04425539821386337,
+					0.03098093532025814,
+					-0.029961077496409416,
+					-0.054501574486494064,
+					-0.060159794986248016,
+					0.061512015759944916,
+					0.100747250020504,
+					0.2966764271259308,
+					-0.1411464363336563,
+					-0.06119612604379654,
+					0.06629589945077896,
+					0.03104349412024021,
+					0.005467324983328581,
+					0.09266741573810577,
+					-0.10526657849550247,
+					-0.43306389451026917,
+					-0.30812737345695496,
+					0.2099461555480957,
+					0.1621623933315277,
+					-0.11136653274297714,
+					0.14153052866458893,
+					0.014127413742244244,
+					-0.028396179899573326,
+					0.08521207422018051,
+					0.06055605411529541,
+					-0.09213362634181976,
+					0.00932945404201746,
+					-0.034042537212371826,
+					0.3749036490917206,
+					-0.3256044387817383,
+					0.4106653332710266,
+					-0.23375527560710907,
+					0.20314757525920868,
+					-0.16114899516105652,
+					0.03889362886548042,
+					0.12910133600234985,
+					0.008862814866006374,
+					0.2624390125274658,
+					0.07948166877031326,
+					0.038010574877262115,
+					-0.16812652349472046,
+					0.043892595916986465,
+					0.09686350077390671,
+					0.09574401378631592,
+					0.2670617699623108,
+					0.12537682056427002,
+					-0.3100651204586029,
+					0.050105269998311996,
+					0.042772505432367325,
+					0.013947603292763233,
+					0.1606682986021042,
+					0.02079601027071476,
+					-0.19633640348911285,
+					0.04702640324831009,
+					-0.27138105034828186,
+					-0.021974142640829086,
+					-0.0026117225643247366,
+					-0.15000060200691223,
+					0.01564360223710537,
+					-0.2763657569885254,
+					-0.03325348719954491,
+					-0.03497062623500824,
+					-0.07743602246046066,
+					-0.0640551894903183,
+					-0.015435711480677128,
+					-0.5653560161590576,
+					0.014165273867547512,
+					0.07652201503515244,
+					0.11446677148342133,
+					0.09217729419469833,
+					0.027863414958119392,
+					0.3405815660953522,
+					-0.04660144820809364,
+					-0.033828843384981155,
+					-0.10818058997392654,
+					-0.22587832808494568,
+					-0.0603819414973259,
+					-0.04141740873456001,
+					0.34604766964912415,
+					-0.13291476666927338,
+					0.003634838154539466,
+					-0.05168921500444412,
+					0.09428655356168747,
+					0.0013513898011296988,
+					-0.04789423942565918,
+					-0.0015343178529292345,
+					-0.08675921708345413,
+					-0.09725366532802582,
+					-0.1699926108121872,
+					-0.00830102153122425,
+					0.02398180402815342,
+					0.31160566210746765,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"vectorizationTime": "2025-05-16 12:33:21"
+			},
+			"pseudoCreationTime": "2025-05-16T12:31:43.685430Z",
+			"odm": [
+				{
+					"odmId": "165e38f7c646e11bac0a213d9fbc67dcfc8d8584314988c7534fb1a0ccd1ec59",
+					"odmType": "SECURITY",
+					"odmSubType": "Threat",
+					"odmVersion": "1.0",
+					"odmCreationTime": "2025-05-16T12:33:21.553908Z",
+					"customer_id": "EPICID-57-9544627939",
+					"partner_id": "EPICID-1-3013093360",
+					"service_provider_id": "EPICID-57-3201882173",
+					"correlation": {
+						"hints": [
+							{
+								"key": "user",
+								"value": [
+									"ri-gcp-admin"
+								],
+								"elasticsearchFilter": "{}",
+								"category": null
+							}
+						]
+					},
+					"signal": {
+						"id": 82842459,
+						"subject": "gcp vpc network changes",
+						"createdTime": "2025-05-16T12:31:43.685430Z",
+						"ingestedTime": "2025-05-16T12:33:09.372410520Z",
+						"source": "GoogleChronicle",
+						"externalSource": "GoogleChronicle",
+						"externalId": "de_9a787498-23ee-91de-e34c-8772e05fe186",
+						"metric": null,
+						"detectionRule": "gcp_vpc_network_changes",
+						"detectionCreatedTime": "2025-05-16T12:27:00Z",
+						"detectionControl": "Netenrich Curated",
+						"severity": "INFORMATIONAL"
+					},
+					"mitre": {
+						"attack": [
+							{
+								"tactic_id": "TA0005",
+								"tactic": "Defense Evasion",
+								"technique_id": "T1578",
+								"technique": "Modify Cloud Compute Infrastructure",
+								"sub_technique": "",
+								"sub_technique_id": "",
+								"data_source": "Instance",
+								"data_component": "Instance Deletion",
+								"platform": [
+									"IaaS"
+								]
+							},
+							{
+								"tactic_id": "TA0005",
+								"tactic": "Defense Evasion",
+								"technique_id": "T1578",
+								"technique": "Modify Cloud Compute Infrastructure",
+								"sub_technique": "",
+								"sub_technique_id": "",
+								"data_source": "Instance",
+								"data_component": "Instance Deletion",
+								"platform": [
+									"IaaS"
+								]
+							},
+							{
+								"tactic_id": "TA0005",
+								"tactic": "Defense Evasion",
+								"technique_id": "T1578",
+								"technique": "Modify Cloud Compute Infrastructure",
+								"sub_technique": "",
+								"sub_technique_id": "",
+								"data_source": "Instance",
+								"data_component": "Instance Deletion",
+								"platform": [
+									"IaaS"
+								]
+							},
+							{
+								"tactic_id": "TA0005",
+								"tactic": "Defense Evasion",
+								"technique_id": "T1578",
+								"technique": "Modify Cloud Compute Infrastructure",
+								"sub_technique": "",
+								"sub_technique_id": "",
+								"data_source": "Instance",
+								"data_component": "Instance Deletion",
+								"platform": [
+									"IaaS"
+								]
+							}
+						]
+					},
+					"event": {
+						"env": null,
+						"outcome": "ALLOW",
+						"subSystems": "c-389-3689385424-dev-llm",
+						"metadata": {
+							"id": "AAAAANVEafD28jp1BhNEio43js0AAAAADgAAACoAAAA=",
+							"vendorName": "Google Cloud Platform",
+							"productName": "Google Compute Engine",
+							"eventType": "RESOURCE_DELETION",
+							"eventTimestamp": "2025-05-16T12:26:30.981780Z",
+							"ingestedTimestamp": "2025-05-16T12:26:37.102810Z",
+							"productEventType": "v1.compute.networks.delete"
+						},
+						"principal": {
+							"function": null,
+							"location": "United States",
+							"githubTeams": [],
+							"primaryEntity": {
+								"key": "user",
+								"value": [
+									"ri-gcp-admin"
+								],
+								"entityId": "",
+								"entityClass": ""
+							},
+							"ODMContext": {
+								"user": {
+									"userid": "ri-gcp-admin",
+									"displayName": "ri-gcp-admin",
+									"email": [
+										"ri-gcp-admin@ri-model-administrator-dev.iam.gserviceaccount.com"
+									],
+									"roleType": [
+										"SERVICE_ACCOUNT"
+									],
+									"roleName": [
+										"roles/owner"
+									]
+								},
+								"ip": {
+									"address": [
+										"2600:1900:0:2101::900"
+									],
+									"geo": {
+										"country": "United States"
+									}
+								}
+							},
+							"administrativeDomain": "ri-model-administrator-dev.iam.gserviceaccount.com"
+						},
+						"relationship": "deleted",
+						"target": {
+							"function": null,
+							"location": null,
+							"githubTeams": [],
+							"primaryEntity": {
+								"key": "VPC_NETWORK",
+								"value": [
+									"default"
+								],
+								"entityId": "",
+								"entityClass": ""
+							},
+							"ODMContext": {
+								"resource": {
+									"name": "default",
+									"productObjectId": "projects/c-389-3689385424-dev-llm/global/networks/default",
+									"project": "c-389-3689385424-dev-llm",
+									"resourceType": "VPC_NETWORK"
+								}
+							}
+						},
+						"threat": [
+							{
+								"name": "",
+								"category": [],
+								"categoryDetails": [
+									"projects/c-389-3689385424-dev-llm/logs/cloudaudit.googleapis.com%2Factivity"
+								],
+								"feedName": "",
+								"intelSource": ""
+							}
+						]
+					},
+					"sreClass": null
+				}
+			],
+			"packageGroupInfo": 0,
+			"instanceDetails": [
+				{
+					"updatedTime": "2025-05-16T12:31:43.685430Z",
+					"alertType": "Monitoring",
+					"ingestionTime": "2025-05-16T12:33:09.372410520Z",
+					"subject": "gcp vpc network changes",
+					"currentState": "Critical",
+					"repeatCount": 1
+				}
+			],
+			"docUpdatedTime": "2025-05-16T12:33:30.538Z",
+			"docCreatedTime": "2025-05-16T12:33:22.393Z",
+			"score_likelihood": 0,
+			"score_confidence": 66,
+			"score_impact": 10,
+			"scoringEvidence": [
+				{
+					"severity": "High",
+					"visible": true,
+					"evidence": "This is a rare extremely similar signal.",
+					"entities": [],
+					"evidenceType": "confidence",
+					"scope": "customer",
+					"name": "Rare extremely similar signal",
+					"firstEventTime": 0,
+					"message": "",
+					"evaluationTime": 1747398802699,
+					"evidenceSubType": "prevalence"
+				},
+				{
+					"severity": "Low",
+					"visible": true,
+					"evidence": "The signal has low similarity with signals previously marked as relevant by analysts.",
+					"entities": [],
+					"evidenceType": "confidence",
+					"scope": "customer",
+					"name": "Low Confidence Relevance",
+					"firstEventTime": 0,
+					"message": "",
+					"evaluationTime": 1747398802699,
+					"evidenceSubType": "relevance"
+				},
+				{
+					"severity": "Low",
+					"visible": true,
+					"evidence": "",
+					"entities": [],
+					"evidenceType": "confidence",
+					"scope": null,
+					"name": "Detection rule 'gcp_vpc_network_changes' tagged as low confidence",
+					"firstEventTime": 0,
+					"message": "",
+					"evaluationTime": 1747398802699,
+					"evidenceSubType": null
+				},
+				{
+					"severity": "Low",
+					"visible": true,
+					"evidence": "",
+					"entities": [
+						{
+							"type": "user",
+							"value": "ri-gcp-admin"
+						}
+					],
+					"evidenceType": "impact",
+					"scope": null,
+					"name": "Users Identified with Low Criticality",
+					"firstEventTime": 0,
+					"message": "",
+					"evaluationTime": 1747398802699,
+					"evidenceSubType": null
+				}
+			],
+			"incidents": [
+				{
+					"ticketPolicy": {
+						"partner": {
+							"isTicket": true,
+							"modificationTime": 1744614808728,
+							"modificationType": "policy",
+							"derivedSource": "customer"
+						},
+						"service_provider": {
+							"isTicket": true,
+							"modificationTime": 1744614808728,
+							"modificationType": "policy",
+							"derivedSource": "customer"
+						},
+						"customer": {
+							"isTicket": true,
+							"modificationTime": 1744614808728,
+							"policies": [
+								{
+									"ruleName": "Moderate Confidence",
+									"ruleId": "a4fb4fe6-7879-4cd3-8f21-724490b81e20"
+								},
+								{
+									"ruleName": "Low Likelihood with Moderate Confidence",
+									"ruleId": "7a18f2d5-ba94-4bde-a8a9-8a1c5db617fb"
+								}
+							],
+							"modificationType": "policy",
+							"derivedSource": "self"
+						}
+					},
+					"correlationV3": {
+						"correlationRuleId": "95582cf1-2a54-42d9-b885-eabbb0194138",
+						"defaultSubject": {
+							"templateType": "jinja",
+							"enabled": true,
+							"templateString": "{{primary_alert_field_value(\"subject\", \"Default subject\")}}"
+						},
+						"subject": {
+							"templateType": "jinja",
+							"enabled": true,
+							"templateString": "{{unique(get_attribute_values(incident, \"alerts.alertCategory\"),10)}}    observed by principal user {{unique(get_attribute_values(incident, 'alerts.security.events.principal.user.userid'),1)}}"
+						},
+						"ticketStatus": "OPEN",
+						"tempTicketId": "79119834",
+						"version": "3",
+						"correlationRule": "Multiple behaviors detected on same principal user - excluding default users",
+						"ticketId": "116689766"
+					},
+					"ticketCreatedTime": 1744614803,
+					"ticketId": 116689766
+				}
+			],
+			"rca": false,
+			"correlationV3": {
+				"correlationRuleId": "95582cf1-2a54-42d9-b885-eabbb0194138",
+				"defaultSubject": {
+					"templateType": "jinja",
+					"enabled": true,
+					"templateString": "{{primary_alert_field_value(\"subject\", \"Default subject\")}}"
+				},
+				"subject": {
+					"templateType": "jinja",
+					"enabled": true,
+					"templateString": "{{unique(get_attribute_values(incident, \"alerts.alertCategory\"),10)}}    observed by principal user {{unique(get_attribute_values(incident, 'alerts.security.events.principal.user.userid'),1)}}"
+				},
+				"ticketStatus": "OPEN",
+				"tempTicketId": "79119834",
+				"version": "3",
+				"correlationRule": "Multiple behaviors detected on same principal user - excluding default users",
+				"ticketId": "116689766"
+			}
+		},
+		{
+			"meta": {
+				"is_new_alert": true,
+				"alertCorrelation": {
+					"queue": {
+						"partitionKey": "EPICID-57-9544627939",
+						"topic": "ape_incoming_normalised_alerts_topic",
+						"type": "kafka"
+					}
+				}
+			},
+			"assets": [
+				{
+					"asset_name": null,
+					"asset_type": "",
+					"source": [
+						{
+							"source_asset_id": "",
+							"name": "GoogleChronicle"
+						}
+					]
+				}
+			],
+			"isDemo": false,
+			"metric": "gcp_vpc_network_changes",
+			"status": "New",
+			"actions": [
+				{
+					"scope": "customer",
+					"action": "route",
+					"rule_id": "ef7e0dda-0eb8-4cd7-b6ae-9ce26d3ed173",
+					"rule_name": "Route rule for All Google Chronicle Signals - 1686021703064",
+					"dict_value": {
+						"service_id": "8503750f-3b13-47b8-9dab-cde4c50d83df"
+					},
+					"value_type": "dict",
+					"on_conflict": "append",
+					"precedence_order": 59
+				},
+				{
+					"scope": "customer",
+					"action": "alert_tag",
+					"rule_id": "5b314334-b60d-4843-a043-6c05b7449ac3",
+					"rule_name": "principal_enterprise_IP_addresses-no",
+					"list_value": [
+						{
+							"key": "principal_enterprise_ip",
+							"value": "no"
+						}
+					],
+					"value_type": "list",
+					"on_conflict": "append",
+					"precedence_order": 86
+				},
+				{
+					"scope": "customer",
+					"action": "alert_tag",
+					"rule_id": "9f5b615b-56d3-42f8-8337-97743f6803f0",
+					"rule_name": "principal_default_users - no",
+					"list_value": [
+						{
+							"key": "principal_default_user",
+							"value": "no"
+						}
+					],
+					"value_type": "list",
+					"on_conflict": "append",
+					"precedence_order": 87
+				},
+				{
+					"scope": "customer",
+					"action": "alert_tag",
+					"rule_id": "35aa2353-8d52-49b7-8e16-307daba278e8",
+					"rule_name": "target_default_user- no",
+					"list_value": [
+						{
+							"key": "target_default_user",
+							"value": "no"
+						}
+					],
+					"value_type": "list",
+					"on_conflict": "append",
+					"precedence_order": 95
+				}
+			],
+			"alertId": 81495283,
+			"isolate": false,
+			"subject": "gcp vpc network changes",
+			"summary": "",
+			"version": 1,
+			"priority": "P3",
+			"security": {
+				"events": [
+					{
+						"target": {
+							"cloud": {
+								"project": {
+									"name": "c-138-2427494132-stg-llm"
+								}
+							},
+							"resource": {
+								"name": "default",
+								"attribute": {
+									"cloud": {
+										"environment": "GOOGLE_CLOUD_PLATFORM"
+									},
+									"labels": [
+										{
+											"key": "Request type",
+											"value": "type.googleapis.com/compute.networks.delete"
+										}
+									]
+								},
+								"resourceType": "VPC_NETWORK",
+								"productObjectId": "projects/c-138-2427494132-stg-llm/global/networks/default"
+							},
+							"application": "compute.googleapis.com",
+							"resourceAncestors": [
+								{
+									"name": "c-138-2427494132-stg-llm"
+								},
+								{
+									"attribute": {
+										"labels": [
+											{
+												"key": "cloud_project",
+												"value": "c-138-2427494132-stg-llm"
+											}
+										]
+									}
+								}
+							]
+						},
+						"network": {
+							"http": {
+								"userAgent": "google-api-go-client/0.5 Terraform/1.10.3 (+https://www.terraform.io) Terraform-Plugin-SDK/2.36.0 terraform-provider-google/6.33.0,gzip(gfe)"
+							}
+						},
+						"metadata": {
+							"id": "AAAAAAeCiIHb0J0sdY6FNQWIzqkAAAAADgAAAAEAAAA=",
+							"logType": "GCP_CLOUDAUDIT",
+							"eventType": "RESOURCE_DELETION",
+							"baseLabels": {
+								"logTypes": [
+									"GCP_CLOUDAUDIT"
+								],
+								"allowScopedAccess": true
+							},
+							"vendorName": "Google Cloud Platform",
+							"productName": "Google Compute Engine",
+							"productLogId": "swu4cid4cc2",
+							"eventTimestamp": "2025-05-05T07:03:14.590040Z",
+							"enrichmentLabels": {
+								"logTypes": [
+									"GCP_IAM_CONTEXT"
+								],
+								"allowScopedAccess": true
+							},
+							"productEventType": "v1.compute.networks.delete",
+							"ingestedTimestamp": "2025-05-05T07:03:20.243212Z",
+							"collectedTimestamp": "2025-05-05T07:03:15.688864944Z",
+							"productDeploymentId": "c-138-2427494132-stg-llm"
+						},
+						"principal": {
+							"ip": [
+								"2600:1900:0:2102::1b00"
+							],
+							"user": {
+								"userid": "ri-gcp-admin",
+								"attribute": {
+									"cloud": {
+										"environment": "GOOGLE_CLOUD_PLATFORM"
+									},
+									"labels": [
+										{
+											"key": "oauth2_client_id",
+											"value": "101070701661262429641"
+										}
+									]
+								},
+								"emailAddresses": [
+									"ri-gcp-admin@ri-gcp-admin.iam.gserviceaccount.com",
+									"ri-gcp-admin@ri-gcp-admin.iam.gserviceaccount.com"
+								],
+								"productObjectId": "101070701661262429641",
+								"userDisplayName": "ri-gcp-admin"
+							},
+							"asset": {
+								"ip": [
+									"2600:1900:0:2102::1b00"
+								]
+							},
+							"location": {
+								"state": "Colorado",
+								"regionLatitude": 39.740063,
+								"countryOrRegion": "United States",
+								"regionLongitude": -104.98616,
+								"regionCoordinates": {
+									"latitude": 39.7400624,
+									"longitude": -104.98616009999999
+								}
+							},
+							"resource": {
+								"attribute": {
+									"labels": [
+										{
+											"key": "Request_instances_instance"
+										},
+										{
+											"key": "request_type",
+											"value": "type.googleapis.com/compute.networks.delete"
+										}
+									]
+								}
+							},
+							"ipGeoArtifact": [
+								{
+									"ip": "2600:1900:0:2102::1b00",
+									"network": {
+										"carrierName": "google",
+										"organizationName": "google llc"
+									},
+									"location": {
+										"state": "Colorado",
+										"regionLatitude": 39.740063,
+										"countryOrRegion": "United States",
+										"regionLongitude": -104.98616,
+										"regionCoordinates": {
+											"latitude": 39.7400624,
+											"longitude": -104.98616009999999
+										}
+									}
+								}
+							],
+							"administrativeDomain": "ri-gcp-admin.iam.gserviceaccount.com"
+						},
+						"securityResult": [
+							{
+								"action": [
+									"ALLOW"
+								],
+								"severity": "INFORMATIONAL",
+								"categoryDetails": [
+									"projects/c-138-2427494132-stg-llm/logs/cloudaudit.googleapis.com%2Factivity"
+								],
+								"detectionFields": [
+									{
+										"key": "resource_name",
+										"value": "projects/c-138-2427494132-stg-llm/global/networks/default"
+									},
+									{
+										"key": "key_id",
+										"value": "6dedf6d98f197ff625268f01806768a0c7b67ad6"
+									}
+								]
+							}
+						]
+					}
+				],
+				"ruleId": "ru_f3f04eb0-6667-4e59-85d1-2557af6ad156",
+				"actions": [
+					"ALLOW"
+				],
+				"eventTypes": [
+					"RESOURCE_DELETION"
+				],
+				"ruleVersion": "ru_f3f04eb0-6667-4e59-85d1-2557af6ad156@v_1678166750_588831000",
+				"networkComms": [
+					{
+						"sourceIp": "2600:1900:0:2102::1b00"
+					},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"ruleConfidence": "Low",
+				"logsourceTypeNames": [
+					"Google Compute Engine"
+				]
+			},
+			"services": [
+				{
+					"scope": "customer",
+					"serviceId": "8503750f-3b13-47b8-9dab-cde4c50d83df"
+				}
+			],
+			"siteName": "",
+			"alertTags": [
+				{
+					"type": "principal_enterprise_ip",
+					"value": "no"
+				},
+				{
+					"type": "principal_default_user",
+					"value": "no"
+				},
+				{
+					"type": "target_default_user",
+					"value": "no"
+				}
+			],
+			"alertTime": "2025-05-05T07:08:53.660584Z",
+			"alertType": "Monitoring",
+			"createdBy": "GoogleChronicle",
+			"eventType": "Alert",
+			"alertClass": "Security",
+			"closedTime": "1970-01-01T00:00:00+00:00",
+			"deviceName": "",
+			"partner_id": "EPICID-1-3013093360",
+			"alertSource": "GoogleChronicle",
+			"createdTime": "2025-05-05T07:08:53.660584Z",
+			"custAlertId": "SCKNC-A-0",
+			"customer_id": "EPICID-57-9544627939",
+			"description": "Identifies an attempt to change the VPC network in the Google Cloud Platform. An adversary can attempt to modify a cloud account's compute service infrastructure to evade defenses.",
+			"inferenceId": 0,
+			"partnerName": "Netenrich Inc",
+			"repeatCount": 1,
+			"serviceName": "gcp vpc network changes",
+			"updatedTime": "2025-05-05T07:08:53.660584Z",
+			"alertClassId": 0,
+			"currentState": "Critical",
+			"customerName": "Netenrich Corporate",
+			"entityGroups": [],
+			"resourceName": "",
+			"resourceType": "",
+			"versionAsStr": "1.0",
+			"alertCategory": "Defense Evasion, Defense Evasion",
+			"alertSourceId": 0,
+			"alertSubClass": "SIEM",
+			"ingestionTime": "2025-05-05T07:12:05.625354993Z",
+			"vectorization": {
+				"alertVector": [
+					-0.42817556858062744,
+					0.15947246551513672,
+					0.0604746975004673,
+					0.12276813387870789,
+					0.2917383313179016,
+					-0.07297366112470627,
+					0.02442202717065811,
+					0.05110275000333786,
+					0.05626538768410683,
+					0.046733129769563675,
+					-0.009075168520212173,
+					-0.03696778789162636,
+					-0.053718503564596176,
+					0.06467824429273605,
+					0.10183724761009216,
+					0.28656917810440063,
+					-0.126859650015831,
+					-0.06529353559017181,
+					0.04619242995977402,
+					0.020358264446258545,
+					0.003019432770088315,
+					0.09397203475236893,
+					-0.09217569231987,
+					-0.43664899468421936,
+					-0.31647947430610657,
+					0.19781623780727386,
+					0.13243459165096283,
+					-0.11437417566776276,
+					0.12418966740369797,
+					0.010865533724427223,
+					-0.04152369871735573,
+					0.08688700944185257,
+					0.049312178045511246,
+					-0.0946739986538887,
+					0.008465000428259373,
+					-0.030076023191213608,
+					0.4132900536060333,
+					-0.3245784640312195,
+					0.4300733506679535,
+					-0.2243788242340088,
+					0.19864779710769653,
+					-0.15176111459732056,
+					0.0433337464928627,
+					0.13373927772045135,
+					0.015095068141818047,
+					0.2734944224357605,
+					0.08245131373405457,
+					0.041467394679784775,
+					-0.18450289964675903,
+					0.05104399845004082,
+					0.11007937788963318,
+					0.06494654715061188,
+					0.2614898681640625,
+					0.11560065299272537,
+					-0.3231055438518524,
+					0.035315822809934616,
+					0.04122510179877281,
+					0.0021081396844238043,
+					0.17668011784553528,
+					0.021186165511608124,
+					-0.18616780638694763,
+					0.04491928592324257,
+					-0.24869517982006073,
+					-0.04477008059620857,
+					0.03220028430223465,
+					-0.15535514056682587,
+					0.025487136095762253,
+					-0.28142789006233215,
+					-0.041423384100198746,
+					-0.04967810586094856,
+					-0.06958656758069992,
+					-0.057919833809137344,
+					0.004764690063893795,
+					-0.5664618611335754,
+					0.041663412004709244,
+					0.07376759499311447,
+					0.05341664329171181,
+					0.10335314273834229,
+					0.029250411316752434,
+					0.3383036255836487,
+					-0.03281553089618683,
+					-0.03233708068728447,
+					-0.1251157969236374,
+					-0.2426014542579651,
+					-0.03786865621805191,
+					-0.07808841019868851,
+					0.33873337507247925,
+					-0.13421224057674408,
+					-0.026391737163066864,
+					-0.06136070564389229,
+					0.1103195771574974,
+					0.0020914392080157995,
+					-0.08923832327127457,
+					-0.00018505398475099355,
+					-0.09174498170614243,
+					-0.08921178430318832,
+					-0.17790007591247559,
+					0.005406735464930534,
+					0.024435406550765038,
+					0.3418043553829193,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"vectorizationTime": "2025-05-05 07:12:08"
+			},
+			"alertSourceUrl": "https://netenrichinternal.backstory.chronicle.security/alert?alertId=de_634dd7e5-9188-3314-5f1a-e09756954099",
+			"dataCenterCode": "US1",
+			"externalSource": "GoogleChronicle",
+			"alertCategoryId": 0,
+			"alertSubClassId": 0,
+			"externalAlertId": "de_634dd7e5-9188-3314-5f1a-e09756954099",
+			"ingestionSource": "NEIngestor",
+			"alertSubCategory": "Modify Cloud Compute Infrastructure, Modify Cloud Compute Infrastructure",
+			"externalClientId": "client_694689",
+			"inferenceIdAsStr": "",
+			"servicesImpacted": {
+				"customer": 1
+			},
+			"additionalContext": {
+				"data": {
+					"type": "RULE_DETECTION",
+					"detection": [
+						{
+							"ruleId": "ru_f3f04eb0-6667-4e59-85d1-2557af6ad156",
+							"ruleName": "gcp_vpc_network_changes",
+							"ruleType": "SINGLE_EVENT",
+							"riskScore": 40,
+							"variables": {
+								"projectName": {
+									"type": "MATCH",
+									"value": "c-138-2427494132-stg-llm",
+									"stringVal": "c-138-2427494132-stg-llm"
+								},
+								"resourceName": {
+									"type": "MATCH",
+									"value": "default",
+									"stringVal": "default",
+									"sourcePath": "udm.target.resource.name"
+								}
+							},
+							"alertState": "ALERTING",
+							"ruleLabels": [
+								{
+									"key": "actor"
+								},
+								{
+									"key": "category"
+								},
+								{
+									"key": "confidence",
+									"value": "Low"
+								},
+								{
+									"key": "custom",
+									"value": "GCP, GCP"
+								},
+								{
+									"key": "datasource",
+									"value": "Cloud Service"
+								},
+								{
+									"key": "description",
+									"value": "Identifies an attempt to change the VPC network in the Google Cloud Platform. An adversary can attempt to modify a cloud account's compute service infrastructure to evade defenses."
+								},
+								{
+									"key": "externalMITRE",
+									"value": "0"
+								},
+								{
+									"key": "externalSubject",
+									"value": "0"
+								},
+								{
+									"key": "falsePositives",
+									"value": "This could be benign in case if change is performed by system administrators. Verify that the configuration change was expected. Exceptions can be added to reference list to filter expected behavior."
+								},
+								{
+									"key": "logsource",
+									"value": "Iaas, Iaas"
+								},
+								{
+									"key": "malware"
+								},
+								{
+									"key": "product"
+								},
+								{
+									"key": "severity",
+									"value": "Low"
+								},
+								{
+									"key": "subject",
+									"value": "gcp vpc network changes"
+								},
+								{
+									"key": "tactic",
+									"value": "Defense Evasion, Defense Evasion"
+								},
+								{
+									"key": "technique",
+									"value": "Modify Cloud Compute Infrastructure, Modify Cloud Compute Infrastructure"
+								},
+								{
+									"key": "tool"
+								},
+								{
+									"key": "vulnerability"
+								}
+							],
+							"description": "Identifies an attempt to change the VPC network in the Google Cloud Platform. An adversary can attempt to modify a cloud account's compute service infrastructure to evade defenses.",
+							"ruleVersion": "ru_f3f04eb0-6667-4e59-85d1-2557af6ad156@v_1678166750_588831000",
+							"detectionFields": [
+								{
+									"key": "resourceName",
+									"value": "default",
+									"source": "udm.target.resource.name"
+								},
+								{
+									"key": "projectName",
+									"value": "c-138-2427494132-stg-llm"
+								}
+							],
+							"urlBackToProduct": "https://netenrichinternal.backstory.chronicle.security/alert?alertId=de_634dd7e5-9188-3314-5f1a-e09756954099"
+						}
+					],
+					"timeWindow": {
+						"endTime": "2025-05-05T07:03:30Z",
+						"startTime": "2025-05-05T06:58:30Z"
+					},
+					"detectionTime": "2025-05-05T07:03:30Z",
+					"collectionElements": [
+						{
+							"label": "e",
+							"references": [
+								{
+									"id": {
+										"id": "ZDllMmQ4Mjg0YzU4NDAyMjM2YzNjMjAyNTEyNGU2MWU="
+									},
+									"event": {
+										"target": {
+											"cloud": {
+												"project": {
+													"name": "c-138-2427494132-stg-llm"
+												}
+											},
+											"resource": {
+												"name": "default",
+												"attribute": {
+													"cloud": {
+														"environment": "GOOGLE_CLOUD_PLATFORM"
+													},
+													"labels": [
+														{
+															"key": "Request type",
+															"value": "type.googleapis.com/compute.networks.delete"
+														}
+													]
+												},
+												"resourceType": "VPC_NETWORK",
+												"productObjectId": "projects/c-138-2427494132-stg-llm/global/networks/default"
+											},
+											"application": "compute.googleapis.com",
+											"resourceAncestors": [
+												{
+													"name": "c-138-2427494132-stg-llm"
+												},
+												{
+													"attribute": {
+														"labels": [
+															{
+																"key": "cloud_project",
+																"value": "c-138-2427494132-stg-llm"
+															}
+														]
+													}
+												}
+											]
+										},
+										"network": {
+											"http": {
+												"userAgent": "google-api-go-client/0.5 Terraform/1.10.3 (+https://www.terraform.io) Terraform-Plugin-SDK/2.36.0 terraform-provider-google/6.33.0,gzip(gfe)"
+											}
+										},
+										"metadata": {
+											"id": "AAAAAAeCiIHb0J0sdY6FNQWIzqkAAAAADgAAAAEAAAA=",
+											"logType": "GCP_CLOUDAUDIT",
+											"eventType": "RESOURCE_DELETION",
+											"baseLabels": {
+												"logTypes": [
+													"GCP_CLOUDAUDIT"
+												],
+												"allowScopedAccess": true
+											},
+											"vendorName": "Google Cloud Platform",
+											"productName": "Google Compute Engine",
+											"productLogId": "swu4cid4cc2",
+											"eventTimestamp": "2025-05-05T07:03:14.590040Z",
+											"enrichmentLabels": {
+												"logTypes": [
+													"GCP_IAM_CONTEXT"
+												],
+												"allowScopedAccess": true
+											},
+											"productEventType": "v1.compute.networks.delete",
+											"ingestedTimestamp": "2025-05-05T07:03:20.243212Z",
+											"collectedTimestamp": "2025-05-05T07:03:15.688864944Z",
+											"productDeploymentId": "c-138-2427494132-stg-llm"
+										},
+										"principal": {
+											"ip": [
+												"2600:1900:0:2102::1b00"
+											],
+											"user": {
+												"userid": "ri-gcp-admin",
+												"attribute": {
+													"cloud": {
+														"environment": "GOOGLE_CLOUD_PLATFORM"
+													},
+													"labels": [
+														{
+															"key": "oauth2_client_id",
+															"value": "101070701661262429641"
+														}
+													]
+												},
+												"emailAddresses": [
+													"ri-gcp-admin@ri-gcp-admin.iam.gserviceaccount.com",
+													"ri-gcp-admin@ri-gcp-admin.iam.gserviceaccount.com"
+												],
+												"productObjectId": "101070701661262429641",
+												"userDisplayName": "ri-gcp-admin"
+											},
+											"asset": {
+												"ip": [
+													"2600:1900:0:2102::1b00"
+												]
+											},
+											"location": {
+												"state": "Colorado",
+												"regionLatitude": 39.740063,
+												"countryOrRegion": "United States",
+												"regionLongitude": -104.98616,
+												"regionCoordinates": {
+													"latitude": 39.7400624,
+													"longitude": -104.98616009999999
+												}
+											},
+											"resource": {
+												"attribute": {
+													"labels": [
+														{
+															"key": "Request_instances_instance"
+														},
+														{
+															"key": "request_type",
+															"value": "type.googleapis.com/compute.networks.delete"
+														}
+													]
+												}
+											},
+											"ipGeoArtifact": [
+												{
+													"ip": "2600:1900:0:2102::1b00",
+													"network": {
+														"carrierName": "google",
+														"organizationName": "google llc"
+													},
+													"location": {
+														"state": "Colorado",
+														"regionLatitude": 39.740063,
+														"countryOrRegion": "United States",
+														"regionLongitude": -104.98616,
+														"regionCoordinates": {
+															"latitude": 39.7400624,
+															"longitude": -104.98616009999999
+														}
+													}
+												}
+											],
+											"administrativeDomain": "ri-gcp-admin.iam.gserviceaccount.com"
+										},
+										"securityResult": [
+											{
+												"action": [
+													"ALLOW"
+												],
+												"severity": "INFORMATIONAL",
+												"categoryDetails": [
+													"projects/c-138-2427494132-stg-llm/logs/cloudaudit.googleapis.com%2Factivity"
+												],
+												"detectionFields": [
+													{
+														"key": "resource_name",
+														"value": "projects/c-138-2427494132-stg-llm/global/networks/default"
+													},
+													{
+														"key": "key_id",
+														"value": "6dedf6d98f197ff625268f01806768a0c7b67ad6"
+													}
+												]
+											}
+										]
+									}
+								}
+							]
+						}
+					]
+				},
+				"dataIngestId": "Alert-1746429125625"
+			},
+			"alertSubCategoryId": 0,
+			"associatedEntities": [
+				{
+					"created_time": 1740477482101,
+					"updated_time": 1740478209931,
+					"critical": false,
+					"entityGroups": [],
+					"opsramp_device": {
+						"total_apps": 0,
+						"device_type": "meraki_vlan",
+						"public_ip_flag": false,
+						"ip_address": [
+							"172.27.1.24"
+						],
+						"private_ip_addresses": [
+							"172.27.1.24"
+						],
+						"alias_name": "",
+						"general_info_dns": [
+							""
+						],
+						"asset_make": "MERAKI",
+						"general_info_created_time": 1740477392000,
+						"category": "meraki_vlan",
+						"antivirus_currdef_supported": false,
+						"last_monitored_time": 1740477968000,
+						"class_code": "generic.resource"
+					},
+					"source": [
+						{
+							"created_time": 1740477392000,
+							"updated_time": 1740478208927,
+							"integration_id": "INTG-c54d536e-daf4-47ee-b793-484587ee18e3",
+							"ingested_source": "MERAKI",
+							"name": "Opsramp",
+							"namespace": "MERAKI_VLAN",
+							"id": "f87abaed-c6b4-4e16-9d27-d5b92f4acb4c",
+							"state": "active",
+							"type": "CMDB",
+							"uri": "https://netenrich.api.opsramp.com",
+							"client_id": "client_694689",
+							"status": "UNKNOWN"
+						}
+					],
+					"type": "opsramp_meraki_vlan",
+					"entity_class": "Network",
+					"deleted": false,
+					"name": "Default",
+					"attributes": {
+						"environment": null,
+						"employment_type": "Full-Time",
+						"pod": null,
+						"OU": "Engineering",
+						"office_location": null
+					},
+					"id": "d260b98f-7185-4a5d-9ed8-108ed1be8f2d",
+					"state": "Active",
+					"category": "Networks"
+				}
+			],
+			"pseudoCreationTime": "2025-05-05T07:08:53.660584Z",
+			"serviceProviderName": "Netenrich Inc (SP)",
+			"service_provider_id": "EPICID-57-3201882173",
+			"permanentlySuppressed": false,
+			"primaryRoutingService": "8503750f-3b13-47b8-9dab-cde4c50d83df",
+			"resolutionsPriorityId": 4,
+			"metricUniqueIdentifier": "UD0000",
+			"odm": [
+				{
+					"odmId": "541d0190cf63d0655af7e9ed6301e8debcc8d2fd4e5eb613c1ec86b82ce752a9",
+					"odmType": "SECURITY",
+					"odmSubType": "Threat",
+					"odmVersion": "1.0",
+					"odmCreationTime": "2025-05-05T07:13:36.119818Z",
+					"customer_id": "EPICID-57-9544627939",
+					"partner_id": "EPICID-1-3013093360",
+					"service_provider_id": "EPICID-57-3201882173",
+					"correlation": {
+						"hints": [
+							{
+								"key": "user",
+								"value": [
+									"ri-gcp-admin"
+								],
+								"elasticsearchFilter": "{}",
+								"category": null
+							}
+						]
+					},
+					"signal": {
+						"id": 81495283,
+						"subject": "gcp vpc network changes",
+						"createdTime": "2025-05-05T07:08:53.660584Z",
+						"ingestedTime": "2025-05-05T07:12:05.625354993Z",
+						"source": "GoogleChronicle",
+						"externalSource": "GoogleChronicle",
+						"externalId": "de_634dd7e5-9188-3314-5f1a-e09756954099",
+						"metric": null,
+						"detectionRule": "gcp_vpc_network_changes",
+						"detectionCreatedTime": "2025-05-05T07:03:30Z",
+						"detectionControl": "Netenrich Curated",
+						"severity": "INFORMATIONAL"
+					},
+					"mitre": {
+						"attack": [
+							{
+								"tactic_id": "TA0005",
+								"tactic": "Defense Evasion",
+								"technique_id": "T1578",
+								"technique": "Modify Cloud Compute Infrastructure",
+								"sub_technique": "",
+								"sub_technique_id": "",
+								"data_source": "Instance",
+								"data_component": "Instance Deletion",
+								"platform": [
+									"IaaS"
+								]
+							},
+							{
+								"tactic_id": "TA0005",
+								"tactic": "Defense Evasion",
+								"technique_id": "T1578",
+								"technique": "Modify Cloud Compute Infrastructure",
+								"sub_technique": "",
+								"sub_technique_id": "",
+								"data_source": "Instance",
+								"data_component": "Instance Deletion",
+								"platform": [
+									"IaaS"
+								]
+							},
+							{
+								"tactic_id": "TA0005",
+								"tactic": "Defense Evasion",
+								"technique_id": "T1578",
+								"technique": "Modify Cloud Compute Infrastructure",
+								"sub_technique": "",
+								"sub_technique_id": "",
+								"data_source": "Instance",
+								"data_component": "Instance Deletion",
+								"platform": [
+									"IaaS"
+								]
+							},
+							{
+								"tactic_id": "TA0005",
+								"tactic": "Defense Evasion",
+								"technique_id": "T1578",
+								"technique": "Modify Cloud Compute Infrastructure",
+								"sub_technique": "",
+								"sub_technique_id": "",
+								"data_source": "Instance",
+								"data_component": "Instance Deletion",
+								"platform": [
+									"IaaS"
+								]
+							}
+						]
+					},
+					"event": {
+						"env": null,
+						"outcome": "ALLOW",
+						"subSystems": "c-138-2427494132-stg-llm",
+						"metadata": {
+							"id": "AAAAAAeCiIHb0J0sdY6FNQWIzqkAAAAADgAAAAEAAAA=",
+							"vendorName": "Google Cloud Platform",
+							"productName": "Google Compute Engine",
+							"eventType": "RESOURCE_DELETION",
+							"eventTimestamp": "2025-05-05T07:03:14.590040Z",
+							"ingestedTimestamp": "2025-05-05T07:03:20.243212Z",
+							"productEventType": "v1.compute.networks.delete"
+						},
+						"principal": {
+							"function": null,
+							"location": "United States",
+							"githubTeams": [],
+							"primaryEntity": {
+								"key": "user",
+								"value": [
+									"ri-gcp-admin"
+								],
+								"entityId": "",
+								"entityClass": ""
+							},
+							"ODMContext": {
+								"user": {
+									"userid": "ri-gcp-admin",
+									"displayName": "ri-gcp-admin",
+									"email": [
+										"ri-gcp-admin@ri-gcp-admin.iam.gserviceaccount.com"
+									]
+								},
+								"ip": {
+									"address": [
+										"2600:1900:0:2102::1b00"
+									],
+									"geo": {
+										"country": "United States"
+									}
+								}
+							},
+							"administrativeDomain": "ri-gcp-admin.iam.gserviceaccount.com"
+						},
+						"relationship": "deleted",
+						"target": {
+							"function": null,
+							"location": null,
+							"githubTeams": [],
+							"primaryEntity": {
+								"key": "VPC_NETWORK",
+								"value": [
+									"default"
+								],
+								"entityId": "",
+								"entityClass": ""
+							},
+							"ODMContext": {
+								"resource": {
+									"name": "default",
+									"productObjectId": "projects/c-138-2427494132-stg-llm/global/networks/default",
+									"project": "c-138-2427494132-stg-llm",
+									"resourceType": "VPC_NETWORK"
+								}
+							}
+						},
+						"threat": [
+							{
+								"name": "",
+								"category": [],
+								"categoryDetails": [
+									"projects/c-138-2427494132-stg-llm/logs/cloudaudit.googleapis.com%2Factivity"
+								],
+								"feedName": "",
+								"intelSource": ""
+							}
+						]
+					},
+					"sreClass": null
+				}
+			],
+			"packageGroupInfo": 0,
+			"instanceDetails": [
+				{
+					"updatedTime": "2025-05-05T07:08:53.660584Z",
+					"alertType": "Monitoring",
+					"ingestionTime": "2025-05-05T07:12:05.625354993Z",
+					"subject": "gcp vpc network changes",
+					"currentState": "Critical",
+					"repeatCount": 1
+				}
+			],
+			"docUpdatedTime": "2025-05-05T07:13:39.474Z",
+			"docCreatedTime": "2025-05-05T07:13:36.404Z",
+			"score_likelihood": 0,
+			"score_confidence": 66,
+			"score_impact": 10,
+			"scoringEvidence": [
+				{
+					"severity": "High",
+					"visible": true,
+					"evidence": "This is a rare extremely similar signal.",
+					"entities": [],
+					"evidenceType": "confidence",
+					"scope": "customer",
+					"name": "Rare extremely similar signal",
+					"firstEventTime": 0,
+					"message": "",
+					"evaluationTime": 1746429216883,
+					"evidenceSubType": "prevalence"
+				},
+				{
+					"severity": "Low",
+					"visible": true,
+					"evidence": "The signal has low similarity with signals previously marked as relevant by analysts.",
+					"entities": [],
+					"evidenceType": "confidence",
+					"scope": "customer",
+					"name": "Low Confidence Relevance",
+					"firstEventTime": 0,
+					"message": "",
+					"evaluationTime": 1746429216883,
+					"evidenceSubType": "relevance"
+				},
+				{
+					"severity": "Low",
+					"visible": true,
+					"evidence": "",
+					"entities": [],
+					"evidenceType": "confidence",
+					"scope": null,
+					"name": "Detection rule 'gcp_vpc_network_changes' tagged as low confidence",
+					"firstEventTime": 0,
+					"message": "",
+					"evaluationTime": 1746429216883,
+					"evidenceSubType": null
+				},
+				{
+					"severity": "Low",
+					"visible": true,
+					"evidence": "",
+					"entities": [
+						{
+							"type": "user",
+							"value": "ri-gcp-admin"
+						}
+					],
+					"evidenceType": "impact",
+					"scope": null,
+					"name": "Users Identified with Low Criticality",
+					"firstEventTime": 0,
+					"message": "",
+					"evaluationTime": 1746429216883,
+					"evidenceSubType": null
+				}
+			],
+			"incidents": [
+				{
+					"ticketPolicy": {
+						"partner": {
+							"isTicket": true,
+							"modificationTime": 1744614808728,
+							"modificationType": "policy",
+							"derivedSource": "customer"
+						},
+						"service_provider": {
+							"isTicket": true,
+							"modificationTime": 1744614808728,
+							"modificationType": "policy",
+							"derivedSource": "customer"
+						},
+						"customer": {
+							"isTicket": true,
+							"modificationTime": 1744614808728,
+							"policies": [
+								{
+									"ruleName": "Moderate Confidence",
+									"ruleId": "a4fb4fe6-7879-4cd3-8f21-724490b81e20"
+								},
+								{
+									"ruleName": "Low Likelihood with Moderate Confidence",
+									"ruleId": "7a18f2d5-ba94-4bde-a8a9-8a1c5db617fb"
+								}
+							],
+							"modificationType": "policy",
+							"derivedSource": "self"
+						}
+					},
+					"correlationV3": {
+						"correlationRuleId": "95582cf1-2a54-42d9-b885-eabbb0194138",
+						"defaultSubject": {
+							"templateType": "jinja",
+							"enabled": true,
+							"templateString": "{{primary_alert_field_value(\"subject\", \"Default subject\")}}"
+						},
+						"subject": {
+							"templateType": "jinja",
+							"enabled": true,
+							"templateString": "{{unique(get_attribute_values(incident, \"alerts.alertCategory\"),10)}}    observed by principal user {{unique(get_attribute_values(incident, 'alerts.security.events.principal.user.userid'),1)}}"
+						},
+						"ticketStatus": "OPEN",
+						"tempTicketId": "79119834",
+						"version": "3",
+						"correlationRule": "Multiple behaviors detected on same principal user - excluding default users",
+						"ticketId": "116689766"
+					},
+					"ticketCreatedTime": 1744614803,
+					"ticketId": 116689766
+				}
+			],
+			"rca": false,
+			"correlationV3": {
+				"correlationRuleId": "95582cf1-2a54-42d9-b885-eabbb0194138",
+				"defaultSubject": {
+					"templateType": "jinja",
+					"enabled": true,
+					"templateString": "{{primary_alert_field_value(\"subject\", \"Default subject\")}}"
+				},
+				"subject": {
+					"templateType": "jinja",
+					"enabled": true,
+					"templateString": "{{unique(get_attribute_values(incident, \"alerts.alertCategory\"),10)}}    observed by principal user {{unique(get_attribute_values(incident, 'alerts.security.events.principal.user.userid'),1)}}"
+				},
+				"ticketStatus": "OPEN",
+				"tempTicketId": "79119834",
+				"version": "3",
+				"correlationRule": "Multiple behaviors detected on same principal user - excluding default users",
+				"ticketId": "116689766"
+			}
+		},
+		{
+			"alertId": 83232995,
+			"custAlertId": "SCKNC-A-0",
+			"inferenceId": 0,
+			"inferenceIdAsStr": "",
+			"subject": "gcp vpc network changes",
+			"description": "Identifies an attempt to change the VPC network in the Google Cloud Platform. An adversary can attempt to modify a cloud account's compute service infrastructure to evade defenses.",
+			"summary": "",
+			"currentState": "Ok",
+			"serviceName": "gcp vpc network changes",
+			"permanentlySuppressed": false,
+			"alertType": "Monitoring",
+			"ingestionSource": "NEIngestor",
+			"alertSource": "GoogleChronicle",
+			"alertSourceId": 0,
+			"externalSource": "GoogleChronicle",
+			"repeatCount": 1,
+			"status": "Closed",
+			"priority": "P3",
+			"createdTime": "2025-05-21T16:45:13.380133Z",
+			"updatedTime": "2025-05-21T18:10:42.548674",
+			"eventType": "Alert",
+			"metric": "gcp_vpc_network_changes",
+			"createdBy": "GoogleChronicle",
+			"closedTime": "2025-05-21T18:10:42.548674",
+			"dataCenterCode": "US1",
+			"alertClassId": 0,
+			"alertSubClassId": 0,
+			"alertCategoryId": 0,
+			"alertSubCategoryId": 0,
+			"alertClass": "Security",
+			"alertSubClass": "SIEM",
+			"alertCategory": "Defense Evasion, Defense Evasion",
+			"alertSubCategory": "Modify Cloud Compute Infrastructure, Modify Cloud Compute Infrastructure",
+			"alertTags": [
+				{
+					"type": "principal_enterprise_ip",
+					"value": "no"
+				},
+				{
+					"type": "principal_default_user",
+					"value": "no"
+				},
+				{
+					"type": "target_default_user",
+					"value": "no"
+				}
+			],
+			"siteName": "",
+			"resourceType": "",
+			"externalAlertId": "de_85b0840d-7de8-f629-a4c9-90c22e6bd306",
+			"externalClientId": "client_694689",
+			"alertTime": "2025-05-21T16:45:13.380133Z",
+			"customer_id": "EPICID-57-9544627939",
+			"partner_id": "EPICID-1-3013093360",
+			"service_provider_id": "EPICID-57-3201882173",
+			"customerName": "Netenrich Corporate",
+			"partnerName": "Netenrich Inc",
+			"serviceProviderName": "Netenrich Inc (SP)",
+			"assets": [
+				{
+					"asset_name": null,
+					"asset_type": "",
+					"source": [
+						{
+							"source_asset_id": "",
+							"name": "GoogleChronicle"
+						}
+					]
+				}
+			],
+			"associatedEntities": [
+				{
+					"created_time": 1740477482101,
+					"updated_time": 1740478209931,
+					"critical": false,
+					"entityGroups": [],
+					"opsramp_device": {
+						"total_apps": 0,
+						"device_type": "meraki_vlan",
+						"public_ip_flag": false,
+						"private_ip_addresses": [
+							"172.27.1.24"
+						],
+						"ip_address": [
+							"172.27.1.24"
+						],
+						"general_info_dns": [
+							""
+						],
+						"alias_name": "",
+						"asset_make": "MERAKI",
+						"general_info_created_time": 1740477392000,
+						"category": "meraki_vlan",
+						"antivirus_currdef_supported": false,
+						"last_monitored_time": 1740477968000,
+						"class_code": "generic.resource"
+					},
+					"source": [
+						{
+							"created_time": 1740477392000,
+							"updated_time": 1740478208927,
+							"integration_id": "INTG-c54d536e-daf4-47ee-b793-484587ee18e3",
+							"ingested_source": "MERAKI",
+							"name": "Opsramp",
+							"namespace": "MERAKI_VLAN",
+							"id": "f87abaed-c6b4-4e16-9d27-d5b92f4acb4c",
+							"state": "active",
+							"type": "CMDB",
+							"uri": "https://netenrich.api.opsramp.com",
+							"client_id": "client_694689",
+							"status": "UNKNOWN"
+						}
+					],
+					"type": "opsramp_meraki_vlan",
+					"entity_class": "Network",
+					"deleted": false,
+					"name": "Default",
+					"attributes": {
+						"environment": null,
+						"employment_type": "Full-Time",
+						"pod": null,
+						"OU": "Engineering",
+						"office_location": null
+					},
+					"id": "d260b98f-7185-4a5d-9ed8-108ed1be8f2d",
+					"state": "Active",
+					"category": "Networks"
+				}
+			],
+			"deviceName": "",
+			"resourceName": "",
+			"isolate": false,
+			"ingestionTime": "2025-05-21T16:47:41.999109293Z",
+			"alertSourceUrl": "https://netenrichinternal.backstory.chronicle.security/alert?alertId=de_85b0840d-7de8-f629-a4c9-90c22e6bd306",
+			"isDemo": false,
+			"additionalContext": {
+				"data": {
+					"detection": [
+						{
+							"detectionFields": [
+								{
+									"source": "udm.target.resource.name",
+									"value": "default",
+									"key": "resourceName"
+								},
+								{
+									"value": "c-58-2423304577-stg-llm",
+									"key": "projectName"
+								}
+							],
+							"variables": {
+								"resourceName": {
+									"stringVal": "default",
+									"type": "MATCH",
+									"value": "default",
+									"sourcePath": "udm.target.resource.name"
+								},
+								"projectName": {
+									"stringVal": "c-58-2423304577-stg-llm",
+									"type": "MATCH",
+									"value": "c-58-2423304577-stg-llm"
+								}
+							},
+							"urlBackToProduct": "https://netenrichinternal.backstory.chronicle.security/alert?alertId=de_85b0840d-7de8-f629-a4c9-90c22e6bd306",
+							"ruleVersion": "ru_f3f04eb0-6667-4e59-85d1-2557af6ad156@v_1678166750_588831000",
+							"ruleType": "SINGLE_EVENT",
+							"ruleName": "gcp_vpc_network_changes",
+							"description": "Identifies an attempt to change the VPC network in the Google Cloud Platform. An adversary can attempt to modify a cloud account's compute service infrastructure to evade defenses.",
+							"riskScore": 40,
+							"ruleId": "ru_f3f04eb0-6667-4e59-85d1-2557af6ad156",
+							"alertState": "ALERTING",
+							"ruleLabels": [
+								{
+									"key": "actor"
+								},
+								{
+									"key": "category"
+								},
+								{
+									"value": "Low",
+									"key": "confidence"
+								},
+								{
+									"value": "GCP, GCP",
+									"key": "custom"
+								},
+								{
+									"value": "Cloud Service",
+									"key": "datasource"
+								},
+								{
+									"value": "Identifies an attempt to change the VPC network in the Google Cloud Platform. An adversary can attempt to modify a cloud account's compute service infrastructure to evade defenses.",
+									"key": "description"
+								},
+								{
+									"value": "0",
+									"key": "externalMITRE"
+								},
+								{
+									"value": "0",
+									"key": "externalSubject"
+								},
+								{
+									"value": "This could be benign in case if change is performed by system administrators. Verify that the configuration change was expected. Exceptions can be added to reference list to filter expected behavior.",
+									"key": "falsePositives"
+								},
+								{
+									"value": "Iaas, Iaas",
+									"key": "logsource"
+								},
+								{
+									"key": "malware"
+								},
+								{
+									"key": "product"
+								},
+								{
+									"value": "Low",
+									"key": "severity"
+								},
+								{
+									"value": "gcp vpc network changes",
+									"key": "subject"
+								},
+								{
+									"value": "Defense Evasion, Defense Evasion",
+									"key": "tactic"
+								},
+								{
+									"value": "Modify Cloud Compute Infrastructure, Modify Cloud Compute Infrastructure",
+									"key": "technique"
+								},
+								{
+									"key": "tool"
+								},
+								{
+									"key": "vulnerability"
+								}
+							]
+						}
+					],
+					"timeWindow": {
+						"startTime": "2025-05-21T16:34:30Z",
+						"endTime": "2025-05-21T16:39:30Z"
+					},
+					"collectionElements": [
+						{
+							"references": [
+								{
+									"id": {
+										"id": "ZTZlMTgzYzcyYmZhMzExODQyNzBlNTUzOWE3ZDMzYTU="
+									},
+									"event": {
+										"principal": {
+											"resourceAncestors": [
+												{
+													"attribute": {
+														"labels": [
+															{
+																"value": "projects/c-58-2423304577-stg-llm/global/networks/default",
+																"key": "cloud_project"
+															}
+														]
+													}
+												}
+											],
+											"resource": {
+												"attribute": {
+													"cloud": {
+														"project": {
+															"name": "projects/c-58-2423304577-stg-llm/global/networks/default",
+															"resourceSubtype": "compute.networks"
+														}
+													},
+													"labels": [
+														{
+															"key": "Request_instances_instance"
+														},
+														{
+															"value": "type.googleapis.com/compute.networks.delete",
+															"key": "request_type"
+														}
+													]
+												}
+											},
+											"ip": [
+												"2600:1900:0:2101::1b00"
+											],
+											"administrativeDomain": "ri-gcp-admin.iam.gserviceaccount.com",
+											"ipGeoArtifact": [
+												{
+													"ip": "2600:1900:0:2101::1b00",
+													"location": {
+														"regionLatitude": 39.740063,
+														"countryOrRegion": "United States",
+														"regionCoordinates": {
+															"latitude": 39.7400624,
+															"longitude": -104.98616009999999
+														},
+														"state": "Colorado",
+														"regionLongitude": -104.98616
+													},
+													"network": {
+														"carrierName": "google",
+														"organizationName": "google llc"
+													}
+												}
+											],
+											"location": {
+												"regionLatitude": 39.740063,
+												"countryOrRegion": "United States",
+												"regionCoordinates": {
+													"latitude": 39.7400624,
+													"longitude": -104.98616009999999
+												},
+												"state": "Colorado",
+												"regionLongitude": -104.98616
+											},
+											"asset": {
+												"ip": [
+													"2600:1900:0:2101::1b00"
+												]
+											},
+											"user": {
+												"emailAddresses": [
+													"ri-gcp-admin@ri-gcp-admin.iam.gserviceaccount.com",
+													"ri-gcp-admin@ri-gcp-admin.iam.gserviceaccount.com",
+													"ri-gcp-admin@ri-gcp-admin.iam.gserviceaccount.com"
+												],
+												"userDisplayName": "ri-gcp-admin",
+												"attribute": {
+													"cloud": {
+														"environment": "GOOGLE_CLOUD_PLATFORM"
+													},
+													"permissions": [
+														{
+															"name": "compute.networks.delete"
+														},
+														{
+															"type": "ADMIN_WRITE"
+														}
+													],
+													"roles": [
+														{
+															"name": "roles/owner",
+															"type": "SERVICE_ACCOUNT"
+														}
+													],
+													"labels": [
+														{
+															"value": "101070701661262429641",
+															"key": "oauth2_client_id"
+														},
+														{
+															"value": "true",
+															"key": "authorization_granted"
+														}
+													]
+												},
+												"userid": "ri-gcp-admin",
+												"productObjectId": "101070701661262429641"
+											}
+										},
+										"metadata": {
+											"logType": "GCP_CLOUDAUDIT",
+											"eventType": "RESOURCE_DELETION",
+											"vendorName": "Google Cloud Platform",
+											"baseLabels": {
+												"allowScopedAccess": true,
+												"logTypes": [
+													"GCP_CLOUDAUDIT"
+												]
+											},
+											"productName": "Google Compute Engine",
+											"collectedTimestamp": "2025-05-21T16:39:21.932188929Z",
+											"ingestedTimestamp": "2025-05-21T16:39:27.922748Z",
+											"productLogId": "tqiswcdbbvw",
+											"id": "AAAAABWh4OOwlKoHusK7IPEjXrgAAAAADgAAAAQAAAA=",
+											"enrichmentLabels": {
+												"allowScopedAccess": true,
+												"logTypes": [
+													"GCP_IAM_ANALYSIS",
+													"GCP_IAM_CONTEXT"
+												]
+											},
+											"productDeploymentId": "c-58-2423304577-stg-llm",
+											"eventTimestamp": "2025-05-21T16:39:20.779053Z",
+											"productEventType": "v1.compute.networks.delete"
+										},
+										"securityResult": [
+											{
+												"severity": "INFORMATIONAL",
+												"detectionFields": [
+													{
+														"value": "projects/c-58-2423304577-stg-llm/global/networks/default",
+														"key": "resource"
+													},
+													{
+														"value": "6dedf6d98f197ff625268f01806768a0c7b67ad6",
+														"key": "key_id"
+													}
+												],
+												"categoryDetails": [
+													"projects/c-58-2423304577-stg-llm/logs/cloudaudit.googleapis.com%2Factivity"
+												],
+												"action": [
+													"ALLOW"
+												]
+											}
+										],
+										"additional": {
+											"request_attributes_time": "2025-05-21T16:39:21.256312Z"
+										},
+										"target": {
+											"cloud": {
+												"project": {
+													"name": "c-58-2423304577-stg-llm"
+												}
+											},
+											"resourceAncestors": [
+												{
+													"name": "c-58-2423304577-stg-llm"
+												},
+												{
+													"attribute": {
+														"labels": [
+															{
+																"value": "projects/c-58-2423304577-stg-llm/global/networks/default",
+																"key": "cloud_project"
+															}
+														]
+													}
+												}
+											],
+											"application": "compute.googleapis.com",
+											"resource": {
+												"name": "default",
+												"attribute": {
+													"cloud": {
+														"environment": "GOOGLE_CLOUD_PLATFORM"
+													},
+													"labels": [
+														{
+															"value": "RUNNING",
+															"key": "response_status"
+														},
+														{
+															"value": "delete",
+															"key": "response_operation_type"
+														},
+														{
+															"value": "operation-1747845560703-635a801c49bfc-34c8661e-22f0b7a7",
+															"key": "response_name"
+														},
+														{
+															"value": "type.googleapis.com/compute.networks.delete",
+															"key": "Request type"
+														}
+													]
+												},
+												"productObjectId": "projects/c-58-2423304577-stg-llm/global/networks/default",
+												"resourceType": "VPC_NETWORK"
+											}
+										},
+										"network": {
+											"http": {
+												"userAgent": "google-api-go-client/0.5 Terraform/1.10.3 (+https://www.terraform.io) Terraform-Plugin-SDK/2.36.0 terraform-provider-google/6.36.0,gzip(gfe)"
+											}
+										}
+									}
+								}
+							],
+							"label": "e"
+						}
+					],
+					"type": "RULE_DETECTION",
+					"detectionTime": "2025-05-21T16:39:30Z"
+				},
+				"dataIngestId": "Alert-1747846061999"
+			},
+			"version": 1,
+			"versionAsStr": "1.0",
+			"security": {
+				"events": [
+					{
+						"principal": {
+							"resourceAncestors": [
+								{
+									"attribute": {
+										"labels": [
+											{
+												"value": "projects/c-58-2423304577-stg-llm/global/networks/default",
+												"key": "cloud_project"
+											}
+										]
+									}
+								}
+							],
+							"resource": {
+								"attribute": {
+									"cloud": {
+										"project": {
+											"name": "projects/c-58-2423304577-stg-llm/global/networks/default",
+											"resourceSubtype": "compute.networks"
+										}
+									},
+									"labels": [
+										{
+											"key": "Request_instances_instance"
+										},
+										{
+											"value": "type.googleapis.com/compute.networks.delete",
+											"key": "request_type"
+										}
+									]
+								}
+							},
+							"ip": [
+								"2600:1900:0:2101::1b00"
+							],
+							"administrativeDomain": "ri-gcp-admin.iam.gserviceaccount.com",
+							"ipGeoArtifact": [
+								{
+									"ip": "2600:1900:0:2101::1b00",
+									"location": {
+										"regionLatitude": 39.740063,
+										"countryOrRegion": "United States",
+										"regionCoordinates": {
+											"latitude": 39.7400624,
+											"longitude": -104.98616009999999
+										},
+										"state": "Colorado",
+										"regionLongitude": -104.98616
+									},
+									"network": {
+										"carrierName": "google",
+										"organizationName": "google llc"
+									}
+								}
+							],
+							"location": {
+								"regionLatitude": 39.740063,
+								"countryOrRegion": "United States",
+								"regionCoordinates": {
+									"latitude": 39.7400624,
+									"longitude": -104.98616009999999
+								},
+								"state": "Colorado",
+								"regionLongitude": -104.98616
+							},
+							"asset": {
+								"ip": [
+									"2600:1900:0:2101::1b00"
+								]
+							},
+							"user": {
+								"emailAddresses": [
+									"ri-gcp-admin@ri-gcp-admin.iam.gserviceaccount.com",
+									"ri-gcp-admin@ri-gcp-admin.iam.gserviceaccount.com",
+									"ri-gcp-admin@ri-gcp-admin.iam.gserviceaccount.com"
+								],
+								"userDisplayName": "ri-gcp-admin",
+								"attribute": {
+									"cloud": {
+										"environment": "GOOGLE_CLOUD_PLATFORM"
+									},
+									"permissions": [
+										{
+											"name": "compute.networks.delete"
+										},
+										{
+											"type": "ADMIN_WRITE"
+										}
+									],
+									"roles": [
+										{
+											"name": "roles/owner",
+											"type": "SERVICE_ACCOUNT"
+										}
+									],
+									"labels": [
+										{
+											"value": "101070701661262429641",
+											"key": "oauth2_client_id"
+										},
+										{
+											"value": "true",
+											"key": "authorization_granted"
+										}
+									]
+								},
+								"userid": "ri-gcp-admin",
+								"productObjectId": "101070701661262429641"
+							}
+						},
+						"metadata": {
+							"logType": "GCP_CLOUDAUDIT",
+							"eventType": "RESOURCE_DELETION",
+							"vendorName": "Google Cloud Platform",
+							"baseLabels": {
+								"allowScopedAccess": true,
+								"logTypes": [
+									"GCP_CLOUDAUDIT"
+								]
+							},
+							"productName": "Google Compute Engine",
+							"collectedTimestamp": "2025-05-21T16:39:21.932188929Z",
+							"ingestedTimestamp": "2025-05-21T16:39:27.922748Z",
+							"productLogId": "tqiswcdbbvw",
+							"id": "AAAAABWh4OOwlKoHusK7IPEjXrgAAAAADgAAAAQAAAA=",
+							"enrichmentLabels": {
+								"allowScopedAccess": true,
+								"logTypes": [
+									"GCP_IAM_ANALYSIS",
+									"GCP_IAM_CONTEXT"
+								]
+							},
+							"productDeploymentId": "c-58-2423304577-stg-llm",
+							"eventTimestamp": "2025-05-21T16:39:20.779053Z",
+							"productEventType": "v1.compute.networks.delete"
+						},
+						"securityResult": [
+							{
+								"severity": "INFORMATIONAL",
+								"detectionFields": [
+									{
+										"value": "projects/c-58-2423304577-stg-llm/global/networks/default",
+										"key": "resource"
+									},
+									{
+										"value": "6dedf6d98f197ff625268f01806768a0c7b67ad6",
+										"key": "key_id"
+									}
+								],
+								"categoryDetails": [
+									"projects/c-58-2423304577-stg-llm/logs/cloudaudit.googleapis.com%2Factivity"
+								],
+								"action": [
+									"ALLOW"
+								]
+							}
+						],
+						"target": {
+							"cloud": {
+								"project": {
+									"name": "c-58-2423304577-stg-llm"
+								}
+							},
+							"resourceAncestors": [
+								{
+									"name": "c-58-2423304577-stg-llm"
+								},
+								{
+									"attribute": {
+										"labels": [
+											{
+												"value": "projects/c-58-2423304577-stg-llm/global/networks/default",
+												"key": "cloud_project"
+											}
+										]
+									}
+								}
+							],
+							"application": "compute.googleapis.com",
+							"resource": {
+								"name": "default",
+								"attribute": {
+									"cloud": {
+										"environment": "GOOGLE_CLOUD_PLATFORM"
+									},
+									"labels": [
+										{
+											"value": "RUNNING",
+											"key": "response_status"
+										},
+										{
+											"value": "delete",
+											"key": "response_operation_type"
+										},
+										{
+											"value": "operation-1747845560703-635a801c49bfc-34c8661e-22f0b7a7",
+											"key": "response_name"
+										},
+										{
+											"value": "type.googleapis.com/compute.networks.delete",
+											"key": "Request type"
+										}
+									]
+								},
+								"productObjectId": "projects/c-58-2423304577-stg-llm/global/networks/default",
+								"resourceType": "VPC_NETWORK"
+							}
+						},
+						"network": {
+							"http": {
+								"userAgent": "google-api-go-client/0.5 Terraform/1.10.3 (+https://www.terraform.io) Terraform-Plugin-SDK/2.36.0 terraform-provider-google/6.36.0,gzip(gfe)"
+							}
+						}
+					}
+				],
+				"ruleId": "ru_f3f04eb0-6667-4e59-85d1-2557af6ad156",
+				"actions": [
+					"ALLOW"
+				],
+				"eventTypes": [
+					"RESOURCE_DELETION"
+				],
+				"ruleVersion": "ru_f3f04eb0-6667-4e59-85d1-2557af6ad156@v_1678166750_588831000",
+				"networkComms": [
+					{
+						"sourceIp": "2600:1900:0:2101::1b00"
+					},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"ruleConfidence": "Low",
+				"logsourceTypeNames": [
+					"Google Compute Engine"
+				]
+			},
+			"meta": {
+				"is_new_alert": true,
+				"alertCorrelation": {
+					"queue": {
+						"partitionKey": "EPICID-57-9544627939",
+						"topic": "ape_incoming_normalised_alerts_topic",
+						"type": "kafka"
+					}
+				}
+			},
+			"metricUniqueIdentifier": "UD0000",
+			"resolutionsPriorityId": 4,
+			"entityGroups": [],
+			"services": [
+				{
+					"scope": "customer",
+					"serviceId": "8503750f-3b13-47b8-9dab-cde4c50d83df"
+				}
+			],
+			"servicesImpacted": {
+				"customer": 1
+			},
+			"primaryRoutingService": "8503750f-3b13-47b8-9dab-cde4c50d83df",
+			"actions": [
+				{
+					"action": "route",
+					"rule_id": "ef7e0dda-0eb8-4cd7-b6ae-9ce26d3ed173",
+					"rule_name": "Route rule for All Google Chronicle Signals - 1686021703064",
+					"scope": "customer",
+					"value_type": "dict",
+					"on_conflict": "append",
+					"precedence_order": 59,
+					"dict_value": {
+						"service_id": "8503750f-3b13-47b8-9dab-cde4c50d83df"
+					}
+				},
+				{
+					"action": "alert_tag",
+					"rule_id": "5b314334-b60d-4843-a043-6c05b7449ac3",
+					"rule_name": "principal_enterprise_IP_addresses-no",
+					"scope": "customer",
+					"value_type": "list",
+					"on_conflict": "append",
+					"precedence_order": 86,
+					"list_value": [
+						{
+							"value": "no",
+							"key": "principal_enterprise_ip"
+						}
+					]
+				},
+				{
+					"action": "alert_tag",
+					"rule_id": "9f5b615b-56d3-42f8-8337-97743f6803f0",
+					"rule_name": "principal_default_users - no",
+					"scope": "customer",
+					"value_type": "list",
+					"on_conflict": "append",
+					"precedence_order": 87,
+					"list_value": [
+						{
+							"value": "no",
+							"key": "principal_default_user"
+						}
+					]
+				},
+				{
+					"action": "alert_tag",
+					"rule_id": "35aa2353-8d52-49b7-8e16-307daba278e8",
+					"rule_name": "target_default_user- no",
+					"scope": "customer",
+					"value_type": "list",
+					"on_conflict": "append",
+					"precedence_order": 95,
+					"list_value": [
+						{
+							"value": "no",
+							"key": "target_default_user"
+						}
+					]
+				}
+			],
+			"vectorization": {
+				"alertVector": [
+					-0.4546801745891571,
+					0.17611107230186462,
+					0.06674018502235413,
+					0.06065450608730316,
+					0.2816571593284607,
+					-0.12499479949474335,
+					0.006840229034423828,
+					0.07149824500083923,
+					0.06445445865392685,
+					-0.018260177224874496,
+					-0.023755665868520737,
+					-0.04749850928783417,
+					-0.06727223098278046,
+					0.06468649953603745,
+					0.12765628099441528,
+					0.3253211975097656,
+					-0.1112438440322876,
+					-0.07784448564052582,
+					0.053711023181676865,
+					0.0013605051208287477,
+					-0.0006895354017615318,
+					0.10475632548332214,
+					-0.12940923869609833,
+					-0.39757272601127625,
+					-0.2904622256755829,
+					0.20147301256656647,
+					0.0819724053144455,
+					-0.09923243522644043,
+					0.14309382438659668,
+					0.026576438918709755,
+					-0.03384434059262276,
+					0.09765580296516418,
+					0.052725110203027725,
+					-0.08781681209802628,
+					0.03746771067380905,
+					-0.013748043216764927,
+					0.3599867522716522,
+					-0.34261709451675415,
+					0.3981989622116089,
+					-0.22476960718631744,
+					0.21394281089305878,
+					-0.1437997967004776,
+					0.02708783745765686,
+					0.1483171582221985,
+					-0.021852046251296997,
+					0.25633323192596436,
+					0.04897165670990944,
+					0.026501059532165527,
+					-0.16267067193984985,
+					0.045193690806627274,
+					0.10365989804267883,
+					0.07242492586374283,
+					0.25366416573524475,
+					0.13146233558654785,
+					-0.33935150504112244,
+					0.09650086611509323,
+					0.04379521310329437,
+					0.03189587965607643,
+					0.09309495985507965,
+					-0.0032925442792475224,
+					-0.19139836728572845,
+					0.055531423538923264,
+					-0.23202481865882874,
+					0.006400784943252802,
+					0.0036055603995919228,
+					-0.1780042052268982,
+					0.017644811421632767,
+					-0.3227902948856354,
+					-0.029764922335743904,
+					-0.04647026211023331,
+					-0.07862266898155212,
+					-0.04412117227911949,
+					-0.008275742642581463,
+					-0.5734648108482361,
+					0.007974871434271336,
+					0.07049421966075897,
+					0.03574162349104881,
+					0.10602156817913055,
+					0.009308543987572193,
+					0.352711021900177,
+					-0.04697364196181297,
+					-0.02474687620997429,
+					-0.08571210503578186,
+					-0.2130986899137497,
+					-0.07337082922458649,
+					-0.05665497109293938,
+					0.30828791856765747,
+					-0.16513793170452118,
+					-0.011946788989007473,
+					-0.05431990697979927,
+					0.09634586423635483,
+					0.008684944361448288,
+					-0.12630918622016907,
+					-0.029373032972216606,
+					-0.08141592144966125,
+					-0.08638055622577667,
+					-0.1984395682811737,
+					0.06131695955991745,
+					0.013443470001220703,
+					0.3794744908809662,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"vectorizationTime": "2025-05-21 16:47:43"
+			},
+			"pseudoCreationTime": "2025-05-21T16:45:13.380133Z",
+			"odm": [
+				{
+					"odmId": "a093abac47bba51ee1bda43d81f30dff93c5d267741301e128c7065eb70faa39",
+					"odmType": "SECURITY",
+					"odmSubType": "Threat",
+					"odmVersion": "1.0",
+					"odmCreationTime": "2025-05-21T16:47:44.547293Z",
+					"customer_id": "EPICID-57-9544627939",
+					"partner_id": "EPICID-1-3013093360",
+					"service_provider_id": "EPICID-57-3201882173",
+					"correlation": {
+						"hints": [
+							{
+								"key": "user",
+								"value": [
+									"ri-gcp-admin"
+								],
+								"elasticsearchFilter": "{}",
+								"category": null
+							}
+						]
+					},
+					"signal": {
+						"id": 83232995,
+						"subject": "gcp vpc network changes",
+						"createdTime": "2025-05-21T16:45:13.380133Z",
+						"ingestedTime": "2025-05-21T16:47:41.999109293Z",
+						"source": "GoogleChronicle",
+						"externalSource": "GoogleChronicle",
+						"externalId": "de_85b0840d-7de8-f629-a4c9-90c22e6bd306",
+						"metric": null,
+						"detectionRule": "gcp_vpc_network_changes",
+						"detectionCreatedTime": "2025-05-21T16:39:30Z",
+						"detectionControl": "Netenrich Curated",
+						"severity": "INFORMATIONAL"
+					},
+					"mitre": {
+						"attack": [
+							{
+								"tactic_id": "TA0005",
+								"tactic": "Defense Evasion",
+								"technique_id": "T1578",
+								"technique": "Modify Cloud Compute Infrastructure",
+								"sub_technique": "",
+								"sub_technique_id": "",
+								"data_source": "Instance",
+								"data_component": "Instance Deletion",
+								"platform": [
+									"IaaS"
+								]
+							},
+							{
+								"tactic_id": "TA0005",
+								"tactic": "Defense Evasion",
+								"technique_id": "T1578",
+								"technique": "Modify Cloud Compute Infrastructure",
+								"sub_technique": "",
+								"sub_technique_id": "",
+								"data_source": "Instance",
+								"data_component": "Instance Deletion",
+								"platform": [
+									"IaaS"
+								]
+							},
+							{
+								"tactic_id": "TA0005",
+								"tactic": "Defense Evasion",
+								"technique_id": "T1578",
+								"technique": "Modify Cloud Compute Infrastructure",
+								"sub_technique": "",
+								"sub_technique_id": "",
+								"data_source": "Instance",
+								"data_component": "Instance Deletion",
+								"platform": [
+									"IaaS"
+								]
+							},
+							{
+								"tactic_id": "TA0005",
+								"tactic": "Defense Evasion",
+								"technique_id": "T1578",
+								"technique": "Modify Cloud Compute Infrastructure",
+								"sub_technique": "",
+								"sub_technique_id": "",
+								"data_source": "Instance",
+								"data_component": "Instance Deletion",
+								"platform": [
+									"IaaS"
+								]
+							}
+						]
+					},
+					"event": {
+						"env": null,
+						"outcome": "ALLOW",
+						"subSystems": "c-58-2423304577-stg-llm",
+						"metadata": {
+							"id": "AAAAABWh4OOwlKoHusK7IPEjXrgAAAAADgAAAAQAAAA=",
+							"vendorName": "Google Cloud Platform",
+							"productName": "Google Compute Engine",
+							"eventType": "RESOURCE_DELETION",
+							"eventTimestamp": "2025-05-21T16:39:20.779053Z",
+							"ingestedTimestamp": "2025-05-21T16:39:27.922748Z",
+							"productEventType": "v1.compute.networks.delete"
+						},
+						"principal": {
+							"function": null,
+							"location": "United States",
+							"githubTeams": [],
+							"primaryEntity": {
+								"key": "user",
+								"value": [
+									"ri-gcp-admin"
+								],
+								"entityId": "",
+								"entityClass": ""
+							},
+							"ODMContext": {
+								"user": {
+									"userid": "ri-gcp-admin",
+									"displayName": "ri-gcp-admin",
+									"email": [
+										"ri-gcp-admin@ri-gcp-admin.iam.gserviceaccount.com"
+									],
+									"roleType": [
+										"SERVICE_ACCOUNT"
+									],
+									"roleName": [
+										"roles/owner"
+									]
+								},
+								"ip": {
+									"address": [
+										"2600:1900:0:2101::1b00"
+									],
+									"geo": {
+										"country": "United States"
+									}
+								}
+							},
+							"administrativeDomain": "ri-gcp-admin.iam.gserviceaccount.com"
+						},
+						"relationship": "deleted",
+						"target": {
+							"function": null,
+							"location": null,
+							"githubTeams": [],
+							"primaryEntity": {
+								"key": "VPC_NETWORK",
+								"value": [
+									"default"
+								],
+								"entityId": "",
+								"entityClass": ""
+							},
+							"ODMContext": {
+								"resource": {
+									"name": "default",
+									"productObjectId": "projects/c-58-2423304577-stg-llm/global/networks/default",
+									"project": "c-58-2423304577-stg-llm",
+									"resourceType": "VPC_NETWORK"
+								}
+							}
+						},
+						"threat": [
+							{
+								"name": "",
+								"category": [],
+								"categoryDetails": [
+									"projects/c-58-2423304577-stg-llm/logs/cloudaudit.googleapis.com%2Factivity"
+								],
+								"feedName": "",
+								"intelSource": ""
+							}
+						]
+					},
+					"sreClass": null
+				}
+			],
+			"packageGroupInfo": 0,
+			"instanceDetails": [
+				{
+					"updatedTime": "2025-05-21T16:45:13.380133Z",
+					"alertType": "Monitoring",
+					"ingestionTime": "2025-05-21T16:47:41.999109293Z",
+					"subject": "gcp vpc network changes",
+					"currentState": "Critical",
+					"repeatCount": 1
+				}
+			],
+			"docUpdatedTime": "2025-05-21T18:10:47.589Z",
+			"docCreatedTime": "2025-05-21T16:47:45.508Z",
+			"score_likelihood": 0,
+			"score_confidence": 66,
+			"score_impact": 10,
+			"scoringEvidence": [
+				{
+					"severity": "High",
+					"visible": true,
+					"evidence": "This is a rare extremely similar signal.",
+					"entities": [],
+					"evidenceType": "confidence",
+					"scope": "customer",
+					"name": "Rare extremely similar signal",
+					"firstEventTime": 0,
+					"message": "",
+					"evaluationTime": 1747846066460,
+					"evidenceSubType": "prevalence"
+				},
+				{
+					"severity": "Low",
+					"visible": true,
+					"evidence": "The signal has low similarity with signals previously marked as relevant by analysts.",
+					"entities": [],
+					"evidenceType": "confidence",
+					"scope": "customer",
+					"name": "Low Confidence Relevance",
+					"firstEventTime": 0,
+					"message": "",
+					"evaluationTime": 1747846066460,
+					"evidenceSubType": "relevance"
+				},
+				{
+					"severity": "Low",
+					"visible": true,
+					"evidence": "",
+					"entities": [],
+					"evidenceType": "confidence",
+					"scope": null,
+					"name": "Detection rule 'gcp_vpc_network_changes' tagged as low confidence",
+					"firstEventTime": 0,
+					"message": "",
+					"evaluationTime": 1747846066460,
+					"evidenceSubType": null
+				},
+				{
+					"severity": "Low",
+					"visible": true,
+					"evidence": "",
+					"entities": [
+						{
+							"type": "user",
+							"value": "ri-gcp-admin"
+						}
+					],
+					"evidenceType": "impact",
+					"scope": null,
+					"name": "Users Identified with Low Criticality",
+					"firstEventTime": 0,
+					"message": "",
+					"evaluationTime": 1747846066460,
+					"evidenceSubType": null
+				}
+			],
+			"incidents": [
+				{
+					"ticketPolicy": {
+						"partner": {
+							"isTicket": true,
+							"modificationTime": 1747846866451,
+							"modificationType": "policy",
+							"derivedSource": "customer"
+						},
+						"service_provider": {
+							"isTicket": true,
+							"modificationTime": 1747846866451,
+							"modificationType": "policy",
+							"derivedSource": "customer"
+						},
+						"customer": {
+							"isTicket": true,
+							"modificationTime": 1747846866451,
+							"policies": [
+								{
+									"ruleName": "Moderate Confidence",
+									"ruleId": "a4fb4fe6-7879-4cd3-8f21-724490b81e20"
+								},
+								{
+									"ruleName": "Low Likelihood with Moderate Confidence",
+									"ruleId": "7a18f2d5-ba94-4bde-a8a9-8a1c5db617fb"
+								}
+							],
+							"modificationType": "policy",
+							"derivedSource": "self"
+						}
+					},
+					"correlationV3": {
+						"defaultSubject": {
+							"templateType": "jinja",
+							"enabled": true,
+							"templateString": "{{primary_alert_field_value(\"subject\", \"Default subject\")}}"
+						},
+						"ticketStatus": "CLOSED",
+						"tempTicketId": "",
+						"correlationRule": "",
+						"ticketId": "118447754"
+					},
+					"ticketCreatedTime": 1747846855,
+					"ticketId": 118447754
+				}
+			],
+			"rca": false,
+			"correlationV3": {
+				"defaultSubject": {
+					"templateType": "jinja",
+					"enabled": true,
+					"templateString": "{{primary_alert_field_value(\"subject\", \"Default subject\")}}"
+				},
+				"ticketStatus": "CLOSED",
+				"tempTicketId": "",
+				"correlationRule": "",
+				"ticketId": "118447754"
+			}
+		}
+	],
+	"size": 3,
+	"total": 3
+}
