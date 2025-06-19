@@ -1,0 +1,26 @@
+- name: token_escalation
+  match_sequence:
+    historical_summary: "token issued"
+    current_summary: "token misuse"
+  relevance_reason: "Token issued followed by misuse"
+
+- name: suspicious_login_then_admin
+  match_sequence:
+    historical_summary: "login from unknown location"
+    current_summary: "privileged role assigned"
+  tactic_pair: ["Initial Access", "Privilege Escalation"]
+  relevance_reason: "Suspicious login followed by admin privilege assignment"
+
+- name: shell_then_execution
+  match_sequence:
+    historical_summary: "webshell drop"
+    current_summary: "powershell execution"
+  tactic_pair: ["Initial Access", "Execution"]
+  relevance_reason: "Webshell deployment followed by PowerShell execution"
+
+- name: credential_dump_to_exfil
+  match_sequence:
+    historical_summary: "lsass dump"
+    current_summary: "file exfiltration"
+  tactic_pair: ["Credential Access", "Exfiltration"]
+  relevance_reason: "Credential dumping followed by exfiltration activity"
