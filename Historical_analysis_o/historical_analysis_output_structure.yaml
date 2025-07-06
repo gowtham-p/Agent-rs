@@ -1,0 +1,114 @@
+historical_summary:
+  entity_id: <string>
+    # The normalized identifier of the entity under analysis.
+    # Typically a user ID, email, hostname, etc.
+    # Example: 'svc.analyticsuser@acme.corp'
+
+  relevant_signals:
+    - signal_name: <string>
+        # Name of the signal previously seen that matches current behavior.
+        # Example: 'Phish: [URL detonation reputation]'
+
+      seen_before_count: <int>
+        # How many times this exact signal was historically seen for this entity.
+        # Example: 3
+
+      signal_ids: <list of int>
+        # List of signal IDs from tribal knowledge that match this behavior.
+        # Example: [90010001, 90010042]
+
+      first_seen_date: <string | null>
+        # Earliest occurrence of this signal prior to the current one.
+        # Format: 'YYYY-MM-DD'
+        # Example: '2025-06-03'
+
+      last_seen_date: <string | null>
+        # Most recent historical observation of this signal before the current one.
+        # Example: '2025-06-11'
+
+      inactivity_gap_days: <int | null>
+        # Number of days between the last historical observation and the current signal time.
+        # Example: 24
+
+  tactic_escalation_from: <string | null>
+    # If current signal belongs to a higher MITRE tactic ordinal than a prior one,
+    # this field indicates the latest lower tactic historically observed.
+    # Example: 'Credential Access' → current tactic might be 'Persistence'
+
+  attack_chain_detected:
+    - step: <int>
+      from_tactic: <string>
+      to_tactic: <string>
+      from_signal: <string>
+      to_signal: <string>
+      signal_ids: <list of int>
+        # Each step in the attack chain corresponds to a tactic-to-tactic hop using specific signals.
+
+  role_transitions:
+    - signal_id: <int>
+        # The historical signal where role change was detected.
+        # Example: 90012245
+
+      historical_role: <string>
+        # Role entity played previously: e.g., 'principal', 'target', 'network'.
+        # Example: 'target'
+
+      current_role: <string>
+        # Role the entity plays in the current signal.
+        # Example: 'principal'
+
+      signal_name: <string>
+        # The signal where this role transition is associated.
+        # Example: 'Token misuse from unknown host'
+
+  tactics_timeline:
+    historical_tactics: <list of string>
+      # List of unique tactics observed historically for this entity (before the current signal).
+      # Example: ['Reconnaissance', 'Credential Access', 'Execution']
+
+    current_tactic: <string>
+      # Tactic associated with the current signal being analyzed.
+      # Example: 'Persistence'
+
+
+####### here is an example #######
+
+historical_summary:
+  entity_id: svc.analyticsuser@acme.corp
+
+  relevant_signals:
+    - signal_name: 'Phish: [URL detonation reputation]'
+      seen_before_count: 2
+      signal_ids: [90010123, 90010124]
+      first_seen_date: '2025-06-11'
+      last_seen_date: '2025-06-11'
+      inactivity_gap_days: 18
+
+  tactic_escalation_from: 'Credential Access'
+
+  attack_chain_detected:
+    - step: 1
+      from_tactic: 'Initial Access'
+      to_tactic: 'Credential Access'
+      from_signal: 'Phish: [URL detonation reputation]'
+      to_signal: 'Suspicious login from external IP'
+      signal_ids: [90010124]
+
+    - step: 2
+      from_tactic: 'Credential Access'
+      to_tactic: 'Lateral Movement'
+      from_signal: 'Suspicious login from external IP'
+      to_signal: 'Lateral login from unauthorized host'
+      signal_ids: [90010155]
+
+  role_transitions:
+    - signal_id: 90010333
+      historical_role: 'target'
+      current_role: 'principal'
+      signal_name: 'Unusual token usage on sensitive host'
+
+  tactics_timeline:
+    historical_tactics: ['Initial Access', 'Credential Access']
+    current_tactic: 'Lateral Movement'
+
+
