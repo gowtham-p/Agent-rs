@@ -1,0 +1,13 @@
+6. Never Reference Missing or Unavailable Data:
+If any expected attribute (e.g., user ID, IP, host, or resource name) is missing or not provided, do not mention the absence. 
+Instead, omit the reference or infer what is reasonable from the context. Never use placeholders like "[extracted from file]", "[data not provided]", or similar. 
+Your output must read as a complete, final security assessment.
+
+Bad Example (Do not emulate):
+“User ID is [extracted from file], and IP address is [not available].”
+
+Corrected Version:
+“Repeated login failures were observed from an unknown user account, suggesting a possible brute-force attempt.”
+
+
+
