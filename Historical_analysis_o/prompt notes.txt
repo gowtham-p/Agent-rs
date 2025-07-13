@@ -8,6 +8,3 @@ Bad Example (Do not emulate):
 
 Corrected Version:
 “Repeated login failures were observed from an unknown user account, suggesting a possible brute-force attempt.”
-
-
-
