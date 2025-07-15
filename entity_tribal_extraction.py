@@ -138,7 +138,14 @@ for entity_id, data in entity_context.items():
         "summary_insights": {
             "behavioral_patterns": [],
             "analyst_consensus": ""
+        },
+        "policy_instructions": [
+            {
+            "policy_directive": "",
+            "created_by": "",
+            "created_at": ""
         }
+        ]
     })
 
 # === SAVE YAML ===
