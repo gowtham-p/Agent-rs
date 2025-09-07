@@ -15,10 +15,7 @@ Most “chat with your docs” demos skip the hard parts. This repo shows how to
 - **MMR retrieval** with tunable k/fetch_k
 - **Pluggable model** (`ChatOpenAI`) and prompt templates
 - **Unit tests + eval hooks** for answer quality (RAGAS/DeepEval ready)
-
-## Demo (2-min)
-- 🎥 *Add a short Loom link here*
-- 📸 Screenshots: `docs/images/` (answer + citations)
+=
 
 ## Quickstart
 ```bash
@@ -26,3 +23,28 @@ python -m venv .venv && source .venv/bin/activate  # on Windows: .venv\Scripts\a
 pip install -r requirements.txt
 cp .env.example .env   # add your API key
 python -c "from rag_engine import answer_question; print(answer_question('What is zero trust?'))"
+
+## Project Structure
+.
+├─ src/grounded_agent/        # package (rag_engine.py lives here)
+├─ data/                      # your PDFs (gitignored); include sample in examples/
+├─ examples/                  # tiny sample PDFs + example notebooks
+├─ tests/                     # pytest tests
+├─ docs/                      # README images, architecture diagram
+└─ scripts/                   # build_index.py, eval.py
+
+## Architecture
+**Flow:**
+- Ingestion → Split → Embed → FAISS  
+- Retriever (MMR) → Prompt ({question}, {context}) → LLM  
+- Citations returned alongside answers
+
+
+## Configuration
+
+- `TEXT_SPLIT_CHUNK_SIZE`, `CHUNK_OVERLAP`, `K`, `FETCH_K`  
+  via **env** or `.yaml`  
+
+- `MODEL` and `EMBEDDING_MODEL`  
+  set in **.env**
+
